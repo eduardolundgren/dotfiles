@@ -1,0 +1,9 @@
+#!/bin/sh
+
+mkdir -p ~/src
+cd ~/src
+curl -O http://vc.gerg.ca/hg/vcprompt/archive/tip.tar.gz
+tar xzvf tip.tar.gz
+cd vcprompt-*
+make
+cp vcprompt ~/bin/vcprompt

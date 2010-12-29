@@ -1,0 +1,9 @@
+---
+gem: --no-ri --no-rdoc
+:benchmark: false
+:verbose: true
+:backtrace: false
+:update_sources: true
+:sources:
+- http://gemcutter.org
+- http://gems.github.com

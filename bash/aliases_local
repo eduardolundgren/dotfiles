@@ -1,0 +1,21 @@
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+
+alias apachestop='sudo /usr/sbin/apachectl stop'
+alias apachestart='sudo /usr/sbin/apachectl start'
+
+# Liferay trunk
+
+alias liferay='/Users/eduardo/liferay/tomcats/tomcat-5.5/bin/catalina.sh run'
+alias lfr=liferay
+
+alias ltomcat='cd /Volumes/liferay-trunk/bundles/liferay-portal-trunk/tomcat-6.0.26/'
+alias ltrunk='cd /Volumes/liferay-trunk/trunk/'
+alias atrunk='cd /Volumes/files/htdocs/alloy/trunk/'
+
+# CISCO Project
+
+alias ctrunk='cd /Volumes/files/liferay/projects/clients/cisco/trunk/'
+alias cext='cd /Volumes/files/liferay/projects/clients/cisco/trunk/src-ext'
+alias ccalendar='cd /Volumes/files/liferay/projects/clients/cisco/trunk/src-plugins/portlets/advanced-calendar-portlet'
+alias ctomcat='cd /Volumes/files/liferay/projects/tomcats/liferay-portal-5.2-ee-sp3/tomcat-5.5.27'
