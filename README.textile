@@ -1,4 +1,4 @@
-h1. Wilker Dot Files
+h1. Eduardo Lundgren
 
 This repository inclues my dotfiles for unix enviroments
 
@@ -6,7 +6,7 @@ h2. Install
 
 Install instructions
 
-bc. git clone git://github.com:wilkerlucio/dotfiles.git
+bc. git clone git://github.com:eduardolundgren/dotfiles.git
 cd dotfiles
 rake install
 
