@@ -1,10 +1,15 @@
+# System aliases
+
+alias mlog="tail -f /var/log/mail.log"
+alias pfs="sudo postfix start"
+
 # Utility
 alias tw='watchr autotest.watchr'
 alias reload='source ~/dotfiles/bash/aliases'
 alias ea="$EDITOR ~/dotfiles/bash/aliases && reload" # Edit aliases
 alias ee="$EDITOR ~/dotfiles/bash/env"
 alias mg="mate . && gitx"
-function d { cd ~/Development/$1; }
+function d { cd ~/htdocs/$1; }
 
 # Tar
 alias tx="tar -xvzf"
