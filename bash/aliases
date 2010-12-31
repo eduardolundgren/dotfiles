@@ -28,6 +28,7 @@ alias gco="git checkout"
 alias gd="git diff"
 alias gl="git pull --rebase"
 alias gp="git push"
+alias gperm="find . -name \".git\" -exec git config -f '{}/config' core.filemode false \;"
 
 function git_track() {
 	echo "\n[branch \"$1\"]\n\tremote = origin\n\tmerge = refs/heads/$1" >> ".git/config"
