@@ -1,3 +1,7 @@
+# Ant
+
+alias aa="ant -Dlint.failonerror=false all"
+
 # System aliases
 
 alias mlog="tail -f /var/log/mail.log"

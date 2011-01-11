@@ -6,9 +6,9 @@ alias apachestart='sudo /usr/sbin/apachectl start'
 
 # Liferay trunk
 
-alias liferay='/Users/eduardo/liferay/tomcats/tomcat-5.5/bin/catalina.sh run'
-alias lfr=liferay
-
+alias lpw='cd portal-web/'
+alias lpi='cd portal-impl/'
+alias lps='cd portal-service/'
 alias ltomcat='cd /Volumes/liferay-trunk/bundles/liferay-portal-trunk/tomcat-6.0.26/'
 alias ltrunk='cd /Volumes/liferay-trunk/trunk/'
 alias atrunk='cd /Volumes/files/htdocs/alloy/trunk/'
