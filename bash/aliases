@@ -23,6 +23,7 @@ alias tu="top -o cpu" # cpu
 alias tm="top -o vsize" # memory
 
 # Git
+alias gco="cat .git/config"
 alias g="git status"
 alias gb="git branch"
 alias gba="git branch -a"
