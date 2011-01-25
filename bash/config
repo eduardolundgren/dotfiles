@@ -40,7 +40,7 @@ BWHITE='\e[47m'
 
 #export PS1="\n\u:\w \[$EGREEN\][$(~/.rvm/bin/rvm-prompt)]\$(vcprompt)\[$NO_COLOR\] \n>> "
 #export PS1="\n\w \[$EGREEN\][$(~/.rvm/bin/rvm-prompt)]\$(vcprompt)\[$NO_COLOR\] \n>> "
-export PS1="\n\w \[$EGREEN\]\$(vcprompt) \n>>\[$NO_COLOR\] "
+export PS1="\n\w \[$EGREEN\][\$(vcprompt)] \n>>\[$NO_COLOR\] "
 
 # Eduardo
 

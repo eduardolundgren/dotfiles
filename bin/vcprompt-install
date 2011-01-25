@@ -1,9 +1,4 @@
 #!/bin/sh
 
-mkdir -p ~/src
-cd ~/src
-curl -O http://vc.gerg.ca/hg/vcprompt/archive/tip.tar.gz
-tar xzvf tip.tar.gz
-cd vcprompt-*
-make
-cp vcprompt ~/bin/vcprompt
+curl -s https://github.com/xvzf/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
+chmod 755 ~/bin/vcprompt
