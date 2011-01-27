@@ -9,7 +9,7 @@ alias pfs="sudo postfix start"
 
 # Utility
 alias tw='watchr autotest.watchr'
-alias reload='source ~/dotfiles/bash/aliases'
+alias reload='source ~/dotfiles/bashrc'
 alias ea="$EDITOR ~/dotfiles/bash/aliases && reload" # Edit aliases
 alias ee="$EDITOR ~/dotfiles/bash/env"
 alias mg="mate . && gitx"
@@ -23,17 +23,22 @@ alias tu="top -o cpu" # cpu
 alias tm="top -o vsize" # memory
 
 # Git
-alias gco="cat .git/config"
 alias g="git status"
 alias gb="git branch"
 alias gba="git branch -a"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
+alias gco="cat .git/config"
 alias gco="git checkout"
 alias gd="git diff"
 alias gl="git pull --rebase"
 alias gp="git push"
 alias gperm="find . -name \".git\" -exec git config -f '{}/config' core.filemode false \;"
+alias gsd="git svn dcommit"
+alias gsr="git svn rebase"
+alias upsvn="git checkout master; gsr"
+alias cdev="git checkout dev"
+alias cmaster="git checkout master"
 
 function git_track() {
 	echo "\n[branch \"$1\"]\n\tremote = origin\n\tmerge = refs/heads/$1" >> ".git/config"
