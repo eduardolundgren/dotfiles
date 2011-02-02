@@ -8,6 +8,7 @@ alias mlog="tail -f /var/log/mail.log"
 alias pfs="sudo postfix start"
 
 # Utility
+alias sub='open -a "Sublime Text 2"'
 alias tw='watchr autotest.watchr'
 alias reload='source ~/dotfiles/bashrc'
 alias ea="$EDITOR ~/dotfiles/bash/aliases && reload" # Edit aliases
@@ -39,6 +40,20 @@ alias gsr="git svn rebase"
 alias upsvn="git checkout master; gsr"
 alias cdev="git checkout dev"
 alias cmaster="git checkout master"
+
+#MySQL
+function mysqlexec {
+	mysql -u root -p -e "$1";
+};
+function createdb {
+	mysqlexec "create database \`$1\` CHARACTER SET utf8;";
+}
+function dropdb {
+	mysqlexec "drop database if exists \`$1\`;";
+}
+function cleardb {
+	mysqlexec "drop database if exists \`$1\`; create database \`$1\` CHARACTER SET utf8;"
+}
 
 function git_track() {
 	echo "\n[branch \"$1\"]\n\tremote = origin\n\tmerge = refs/heads/$1" >> ".git/config"
