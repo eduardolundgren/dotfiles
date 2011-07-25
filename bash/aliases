@@ -41,6 +41,10 @@ alias upsvn="git checkout master; gsr"
 alias cdev="git checkout dev"
 alias cmaster="git checkout master"
 
+# HTTP
+
+alias servedir="python -m SimpleHTTPServer 8000"
+
 #MySQL
 function mysqlexec {
 	mysql -u root -p -e "$1";
