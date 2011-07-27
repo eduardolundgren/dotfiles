@@ -1,0 +1,17 @@
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+
+alias apachestop='sudo /usr/sbin/apachectl stop'
+alias apachestart='sudo /usr/sbin/apachectl start'
+
+# Liferay trunk
+
+alias lpw='cd portal-web'
+alias lpi='cd portal-impl'
+alias lps='cd portal-service'
+
+# Bruno
+
+alias ltrunk='cd /liferay/github/portal/trunk'
+alias sb='/data/applications/sublime-text/sublime_text'
+alias gitpr="source /liferay/github/git-pull-request/git-pull-request.sh"
