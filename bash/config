@@ -3,53 +3,37 @@
 export MANPATH=/opt/local/share/man:$MANPATH
 export PATH=~/bin/:/opt/local/bin:/opt/local/sbin:$PATH
 
-# Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
-# misc
-NO_COLOR='\e[0m' #disable any colors
-# regular colors
-BLACK='\e[0;30m'
-RED='\e[0;31m'
-GREEN='\e[0;32m'
-YELLOW='\e[0;33m'
-BLUE='\e[0;34m'
-MAGENTA='\e[0;35m'
-CYAN='\e[0;36m'
-WHITE='\e[0;37m'
-# emphasized (bolded) colors
-EBLACK='\e[1;30m'
-ERED='\e[1;31m'
-EGREEN='\e[1;32m'
-EYELLOW='\e[1;33m'
-EBLUE='\e[1;34m'
-EMAGENTA='\e[1;35m'
-ECYAN='\e[1;36m'
-EWHITE='\e[1;37m'
-# underlined colors
-UBLACK='\e[4;30m'
-URED='\e[4;31m'
-UGREEN='\e[4;32m'
-UYELLOW='\e[4;33m'
-UBLUE='\e[4;34m'
-UMAGENTA='\e[4;35m'
-UCYAN='\e[4;36m'
-UWHITE='\e[4;37m'
-# background colors
-BBLACK='\e[40m'
-BRED='\e[41m'
-BGREEN='\e[42m'
-BYELLOW='\e[43m'
-BBLUE='\e[44m'
-BMAGENTA='\e[45m'
-BCYAN='\e[46m'
-BWHITE='\e[47m'
+# Colors
+
+BLACK=$(tput setaf 0)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+LIME_YELLOW=$(tput setaf 190)
+POWDER_BLUE=$(tput setaf 153)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+BRIGHT=$(tput bold)
+NORMAL=$(tput sgr0)
+BLINK=$(tput blink)
+REVERSE=$(tput smso)
+UNDERLINE=$(tput smul)
+
+export CLICOLOR=1
+LSCOLORS="Gxfxcxdxbxegedabagacad"
+export LSCOLORS
 
 # Eduardo
 
 export ANT_OPTS=-Xmx1024m
-#export PS1="\w \[$EGREEN\]$(vcprompt)\[$NO_COLOR\]\\n\[$EGREEN\]>>\[$NO_COLOR\] "
-export PS1="\w \[$EGREEN\]$(__git_ps1 %s) \n >> \[$NO_COLOR\]"
 
-#preferences
+# Terminal
+
+export PS1='\w \[${GREEN}\]`__git_ps1 "(git:%s)"` \n >> \[${NORMAL}\]'
+
+# Preferences
 
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
@@ -57,9 +41,3 @@ shopt -s histappend
 
 GREP_OPTIONS="--exclude=\*.svn\*"
 export GREP_OPTIONS
-
-# Colors
-
-export CLICOLOR=1
-LSCOLORS="Gxfxcxdxbxegedabagacad"
-export LSCOLORS
