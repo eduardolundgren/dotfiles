@@ -14,4 +14,3 @@ alias lps='cd portal-service'
 
 alias ltrunk='cd /liferay/github/portal/trunk'
 alias sb='/data/applications/sublime-text/sublime_text'
-alias gitpr="source /liferay/github/git-pull-request/git-pull-request.sh"
