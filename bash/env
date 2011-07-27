@@ -1,6 +1,0 @@
-export EDITOR="mvim -f"
-export PATH=~/bin:$PATH
-export RAILS_ENV=development
-export NODE_SERVER=localhost:8080
-
-if [[ -s "$HOME/.rvm/scripts/rvm" ]]  ; then source "$HOME/.rvm/scripts/rvm" ; fi

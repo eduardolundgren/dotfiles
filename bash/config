@@ -1,3 +1,8 @@
+# Paths
+
+export MANPATH=/opt/local/share/man:$MANPATH
+export PATH=~/bin/:/opt/local/bin:/opt/local/sbin:$PATH
+
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
 # misc
 NO_COLOR='\e[0m' #disable any colors
@@ -40,8 +45,9 @@ BWHITE='\e[47m'
 
 # Eduardo
 
-export PS1="\w \[$EGREEN\]$(vcprompt)\[$NO_COLOR\]\\n\[$EGREEN\]>>\[$NO_COLOR\] "
 export ANT_OPTS=-Xmx1024m
+#export PS1="\w \[$EGREEN\]$(vcprompt)\[$NO_COLOR\]\\n\[$EGREEN\]>>\[$NO_COLOR\] "
+export PS1="\w \[$EGREEN\]$(__git_ps1 %s) \n >> \[$NO_COLOR\]"
 
 #preferences
 
@@ -52,69 +58,8 @@ shopt -s histappend
 GREP_OPTIONS="--exclude=\*.svn\*"
 export GREP_OPTIONS
 
-export PATH=~/htdocs/sitejet/docroot/propel/generator/bin/:$PATH
-
-# Set the DISPLAY variable ONLY for OS X earlier than 10.5
-# Do not set it for 10.5, or it will create problems.
-
-if [[ -z $DISPLAY && $(sw_vers -productVersion) < 10.5  && -z $SSH_CONNECTION ]]; then
-	# -- works for Apple X11 with Fast User Switching
-    disp_no=($( ps -awx | grep -F X11.app | awk '{print $NF}' | grep -e ":[0-9]"  ))
-    if [[ -n $disp_no ]];then
-        export DISPLAY=${disp_no}.0
-    else
-        export DISPLAY=:0.0
-    fi
-    echo "DISPLAY has been set to $DISPLAY"
-fi
-
 # Colors
 
 export CLICOLOR=1
 LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LSCOLORS
-
-function prompt {
-local WHITE="\[\033[0;37m\]"
-local GREEN="\[\033[0;32m\]"
-local CYAN="\[\033[0;36m\]"
-local GRAY="\[\033[0;37m\]"
-local BLUE="\[\033[0;34m\]"
-local BLACK="\[\033[0;30m\]"
-#export PS1="\[\e]1;\]$(basename $(dirname $PWD))/\W\[\a\]
-#${GREEN}\u ${CYAN}(\w) ➔ ${WHITE}"
-}
-
-prompt
-
-
-##
-# Your previous /Users/eduardo/.bash_profile file was backed up as /Users/eduardo/.bash_profile.macports-saved_2009-04-19_at_20:13:29
-##
-
-# MacPorts Installer addition on 2009-04-19_at_20:13:29: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-# MacPorts Installer addition on 2009-04-19_at_20:13:29: adding an appropriate MANPATH variable for use with MacPorts.
-export MANPATH=/opt/local/share/man:$MANPATH
-# Finished adapting your MANPATH environment variable for use with MacPorts.
-
-
-##
-# Your previous /Volumes/files/.bash_profile file was backed up as /Volumes/files/.bash_profile.macports-saved_2009-10-18_at_22:43:41
-##
-
-# MacPorts Installer addition on 2009-10-18_at_22:43:41: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-
-##
-# Your previous /Volumes/files//.bash_profile file was backed up as /Volumes/files//.bash_profile.macports-saved_2010-01-29_at_18:44:06
-##
-
-# MacPorts Installer addition on 2010-01-29_at_18:44:06: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
