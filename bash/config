@@ -28,6 +28,7 @@ export LSCOLORS
 # Eduardo
 
 export ANT_OPTS=-Xmx1024m
+export EDITOR='subl -w'
 
 # Terminal
 
