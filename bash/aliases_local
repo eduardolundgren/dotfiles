@@ -13,10 +13,10 @@ alias ltomcat='cd $LIFERAY_BUNDLES/liferay-portal-trunk/tomcat-6.0.26/bin'
 
 # Liferay Utils
 
-alias oaetrunk='aetrunk; subl .;'
-alias oatrunk='atrunk; subl .;'
-alias oletrunk='letrunk; subl .;'
-alias oltrunk='ltrunk; subl .;'
+alias oaetrunk='aetrunk; subl -n .;'
+alias oatrunk='atrunk; subl -n .;'
+alias oletrunk='letrunk; subl -n .;'
+alias oltrunk='ltrunk; subl -n .;'
 
 alias lpi='cd portal-impl'
 alias lps='cd portal-service'
