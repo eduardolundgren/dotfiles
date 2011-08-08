@@ -9,7 +9,13 @@ alias letrunk='cd $LIFERAY_GIT/liferay-portal-ee-6.0.x'
 alias lgit='cd $LIFERAY_GIT'
 alias ltrunk='cd $LIFERAY_GIT/liferay-portal'
 
-alias ltomcat='cd $LIFERAY_BUNDLES/liferay-portal-trunk/tomcat-6.0.26/bin'
+alias ltomcat='cd $LIFERAY_BUNDLES/liferay-portal-trunk/tomcat-6.0.26'
+
+# app server starters
+
+alias tstart='./bin/catalina.sh run && tail -f logs/catalina.out'
+alias dtstart='./bin/catalina.sh jpda run && tail -f logs/catalina.out'
+alias jbstart='./bin/run.sh -b 0.0.0.0 && tail -f server/default/log/server.log'
 
 # Liferay Utils
 
