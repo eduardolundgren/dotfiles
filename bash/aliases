@@ -1,6 +1,8 @@
 # Ant
 
 alias aa="ant -Dlint.failonerror=false all"
+alias deploy="ant deploy"
+alias format-source="ant format-source"
 
 # System aliases
 
@@ -29,18 +31,31 @@ alias gb="git branch"
 alias gba="git branch -a"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
-alias gco="cat .git/config"
+alias gconf="cat .git/config"
 alias gco="git checkout"
 alias gd="git diff"
 alias gl="git pull --rebase"
 alias gp="git push"
 alias gperm="find . -name \".git\" -exec git config -f '{}/config' core.filemode false \;"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
+alias grs="git rebase --skip"
 alias gsd="git svn dcommit"
 alias gsr="git svn rebase"
 alias upsvn="git checkout master; gsr"
 alias cdev="git checkout dev"
 alias cmaster="git checkout master"
 alias gitpr="source ~/dotfiles/bash/git-pull-request/git-pull-request.sh"
+alias gsync="git pull --rebase upstream master; git push origin master"
+alias gdb="gb -D $1"
+
+function gdb-remote {
+	git push origin :$1
+};
+
+function gdb-all {
+	git branch -D $1; git push origin :$1
+};
 
 # HTTP
 
