@@ -29,6 +29,7 @@ export LSCOLORS
 
 export ANT_OPTS=-Xmx1024m
 export EDITOR='subl -w'
+export JAVA_HOME=/Library/Java/Home/
 
 # Terminal
 

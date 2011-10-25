@@ -1,3 +1,4 @@
+. ~/dotfiles/bash/ant-completion.bash
 . ~/dotfiles/bash/git-completion.bash
 . ~/dotfiles/bash/env
 . ~/dotfiles/bash/config
