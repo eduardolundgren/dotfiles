@@ -1,1 +1,0 @@
-#PROMPT_COMMAND='echo -n -e "\e]0;${PWD##*/}\a"'

@@ -2,3 +2,4 @@ vim/tmp
 .DS_Store
 vim/.netrwhist
 gitconfig
+aliases.*

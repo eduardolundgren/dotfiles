@@ -1,54 +1,48 @@
 # Ant
-
 alias aa="ant -Dlint.failonerror=false all"
-alias deploy="ant deploy"
-alias format-source="ant format-source"
+alias ad="ant deploy"
+alias afs="ant format-source"
 
 # System aliases
-
 alias mlog="tail -f /var/log/mail.log"
 alias pfs="sudo postfix start"
 
 # Utility
-alias sub='open -a "Sublime Text 2"'
-alias tw='watchr autotest.watchr'
-alias reload='source ~/dotfiles/bashrc'
 alias ea="$EDITOR ~/dotfiles/bash/aliases && reload" # Edit aliases
 alias ee="$EDITOR ~/dotfiles/bash/env"
-alias mg="mate . && gitx"
-function d { cd ~/htdocs/$1; }
+alias reload='source ~/dotfiles/bashrc'
 
 # Tar
 alias tx="tar -xvzf"
 
 # Processes
-alias tu="top -o cpu" # cpu
 alias tm="top -o vsize" # memory
+alias tu="top -o cpu" # cpu
 
 # Git
+alias cdev="git checkout dev"
+alias cmaster="git checkout master"
 alias g="git status"
 alias gb="git branch"
 alias gba="git branch -a"
+alias gbc="git checkout -b $1"
 alias gc="git commit -v"
 alias gca="git commit -v -a"
-alias gconf="cat .git/config"
 alias gco="git checkout"
+alias gconf="cat .git/config"
 alias gd="git diff"
+alias gdb="gb -D $1"
+alias gitpr="source ~/dotfiles/bash/git-pull-request/git-pull-request.sh"
 alias gl="git pull --rebase"
 alias gp="git push"
 alias gperm="find . -name \".git\" -exec git config -f '{}/config' core.filemode false \;"
-alias grc="git rebase --continue"
 alias gra="git rebase --abort"
+alias grc="git rebase --continue"
 alias grs="git rebase --skip"
 alias gsd="git svn dcommit"
 alias gsr="git svn rebase"
-alias upsvn="git checkout master; gsr"
-alias cdev="git checkout dev"
-alias cmaster="git checkout master"
-alias gbc="git checkout -b $1"
-alias gitpr="source ~/dotfiles/bash/git-pull-request/git-pull-request.sh"
 alias gsync="git pull --rebase upstream master; git push origin master"
-alias gdb="gb -D $1"
+alias upsvn="git checkout master; gsr"
 
 function gdb-remote {
 	git push origin :$1
@@ -59,7 +53,6 @@ function gdb-all {
 };
 
 # HTTP
-
 alias servedir="python -m SimpleHTTPServer 8000"
 
 #MySQL
