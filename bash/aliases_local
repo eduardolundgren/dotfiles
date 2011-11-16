@@ -1,16 +1,35 @@
-alias mysql=/usr/local/mysql/bin/mysql
-alias mysqladmin=/usr/local/mysql/bin/mysqladmin
+# Liferay Github
 
-alias apachestop='sudo /usr/sbin/apachectl stop'
-alias apachestart='sudo /usr/sbin/apachectl start'
+export LIFERAY_GIT="/liferay/github";
+export LIFERAY_BUNDLES="/liferay/bundles";
 
-# Liferay trunk
+alias aetrunk='cd $LIFERAY_GIT/alloy-ui-ee-1.0.x'
+alias atrunk='cd $LIFERAY_GIT/alloy-ui'
+alias letrunk='cd $LIFERAY_GIT/liferay-portal-ee-6.0.x'
+alias lgit='cd $LIFERAY_GIT'
+alias ltrunk='cd $LIFERAY_GIT/liferay-portal'
 
-alias lpw='cd portal-web'
+alias ltomcat='cd $LIFERAY_BUNDLES/liferay-portal-trunk/tomcat-6.0.26/bin'
+
+# Liferay Utils
+
+alias oaetrunk='aetrunk; subl .;'
+alias oatrunk='atrunk; subl .;'
+alias oletrunk='letrunk; subl .;'
+alias oltrunk='ltrunk; subl .;'
+
 alias lpi='cd portal-impl'
 alias lps='cd portal-service'
+alias lpw='cd portal-web'
 
 # Bruno
 
 alias ltrunk='cd /liferay/github/portal/trunk'
-alias sb='/data/applications/sublime-text/sublime_text'
+alias sb='sublime-text-2'
+
+# Other
+
+alias apachestart='sudo /usr/sbin/apachectl start'
+alias apachestop='sudo /usr/sbin/apachectl stop'
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
