@@ -28,7 +28,7 @@ export EDITOR='subl -w'
 
 # JAVA
 export ANT_OPTS=-Xmx1024m
-export JAVA_HOME=/Library/Java/Home/
+export JAVA_HOME=/Library/Java/Home
 
 # Terminal
 
