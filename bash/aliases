@@ -52,9 +52,6 @@ function gdb-all {
 	git branch -D $1; git push origin :$1
 };
 
-# HTTP
-alias servedir="python -m SimpleHTTPServer 8000"
-
 #MySQL
 function mysqlexec {
 	mysql -u root -p -e "$1";
