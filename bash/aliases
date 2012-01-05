@@ -1,14 +1,14 @@
 # Ant
 alias aa="ant -Dlint.failonerror=false all"
 alias ad="ant deploy"
-alias afs="ant format-source"
 
 # System aliases
 alias mlog="tail -f /var/log/mail.log"
 alias pfs="sudo postfix start"
 
 # Utility
-alias ea="$EDITOR ~/dotfiles/bash/aliases && reload" # Edit aliases
+alias ed="$EDITOR ~/dotfiles/"
+alias ea="$EDITOR ~/dotfiles/bash/aliases && reload"
 alias ee="$EDITOR ~/dotfiles/bash/env"
 alias reload='source ~/dotfiles/bashrc'
 
@@ -32,6 +32,9 @@ alias gco="git checkout"
 alias gconf="cat .git/config"
 alias gd="git diff"
 alias gdb="gb -D $1"
+alias gsl="git stash list"
+alias gsa="git stash apply $1"
+alias gss="git stash save"
 alias gitpr="source ~/dotfiles/bash/git-pull-request/git-pull-request.sh"
 alias gl="git pull --rebase"
 alias gp="git push"
