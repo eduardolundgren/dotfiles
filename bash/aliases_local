@@ -22,10 +22,15 @@ alias lpi='cd portal-impl'
 alias lps='cd portal-service'
 alias lpw='cd portal-web'
 
+alias gitpr="source ~/dotfiles/bash/git-tools/git-pull-request/git-pull-request.sh"
+
 # Bruno
 
 alias ltrunk='cd /liferay/github/portal/trunk'
-alias sb='sublime-text-2'
+alias s='sublime-text-2'
+
+export ANT_OPTS=-Xmx1024m
+export EDITOR='subl -w'
 
 # Other
 
