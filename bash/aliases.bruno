@@ -1,0 +1,19 @@
+#
+# Liferay Github
+#
+export PORTAL="/liferay/github/portal";
+export BUNDLES="/liferay/bundles";
+
+#
+# Portal
+#
+alias bundles='cd $BUNDLES'
+alias portal='cd $PORTAL'
+alias trunk='cd $PORTAL/trunk'
+
+#
+# Other
+#
+alias apachestart='sudo /usr/sbin/apachectl start'
+alias apachestop='sudo /usr/sbin/apachectl stop'
+alias gitpr="source ~/dotfiles/bash/git-tools/git-pull-request/git-pull-request.sh"
