@@ -1,8 +1,12 @@
+#
 # Paths
+#
 export MANPATH=/opt/local/share/man:$MANPATH
 export PATH=~/bin/:/opt/local/bin:/opt/local/sbin:$PATH
 
+#
 # Colors
+#
 BLACK=$(tput setaf 0)
 RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
@@ -23,23 +27,20 @@ export CLICOLOR=1
 LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LSCOLORS
 
+#
 # Editor
+#
 export EDITOR='subl -w'
 
+#
 # JAVA
+#
 export ANT_OPTS=-Xmx1024m
 export JAVA_HOME=/Library/Java/Home
 
-# Terminal
-
-# Show branch dirty state in git autocompletion script
-export GIT_PS1_SHOWDIRTYSTATE="true";
-
-# Show upstream state
-export GIT_PS1_SHOWUPSTREAM="verbose"
-export PS1='\w \[${GREEN}\]`__git_ps1 "(git:%s)"` \n >> \[${NORMAL}\]'
-
+#
 # Preferences
+#
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend

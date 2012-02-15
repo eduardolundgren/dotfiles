@@ -1,25 +1,38 @@
+#
 # Ant
+#
 alias aa="ant -Dlint.failonerror=false all"
 alias ad="ant deploy"
 
+#
 # System aliases
+#
 alias mlog="tail -f /var/log/mail.log"
 alias pfs="sudo postfix start"
 
+#
 # Utility
+#
 alias ed="$EDITOR ~/dotfiles/"
 alias ea="$EDITOR ~/dotfiles/bash/aliases && reload"
 alias ee="$EDITOR ~/dotfiles/bash/env"
 alias reload='source ~/dotfiles/bashrc'
 
+#
 # Tar
+#
+alias tc="tar -cvzf"
 alias tx="tar -xvzf"
 
+#
 # Processes
+#
 alias tm="top -o vsize" # memory
 alias tu="top -o cpu" # cpu
 
+#
 # Git
+#
 alias cdev="git checkout dev"
 alias cmaster="git checkout master"
 alias g="git status"
