@@ -32,7 +32,7 @@ alias gundo='git reset --soft HEAD~1'
 
 function gcam {
 	git add -A
-	git commit -a -m "'$*'"
+	git commit -a -m "$*"
 }
 
 zle -N gcam
