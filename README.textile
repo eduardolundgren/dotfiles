@@ -15,7 +15,7 @@ h3. Automatic installer
 
 You can install this via the command line with `curl`
 
-h4. via `curl`
+h4. via `curl` (just run this command and be happy)
 
 @curl -L https://github.com/eduardolundgren/dotfiles/raw/master/install.sh | sh@
 
@@ -27,21 +27,19 @@ h4. Adding a custom config file
 * Enable the plugins you want (take a look at https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins to see what's possible)
 ** example: @plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot)@
 * Theme support: Change the @ZSH_THEME@ environment variable in your *config.yourusername*
-
-bq. ZSH_THEME="robbyrussell"
+** @ZSH_THEME="robbyrussell"@
 
 ** Take a look at the "current themes" :https://wiki.github.com/robbyrussell/oh-my-zsh/themes that come bundled with _Oh My Zsh_.
 
 h4. Extending dotfiles plugins
 
 * If you have many functions which go well together you can put them as a foobar.plugin.zsh file in the @/plugins/foobar/foobar.plugin.zsh@ directory and then enable this plugin.
-** example: @plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot *foobar*)@
+** example: @plugins=(... ruby textmate rationalise-dot *foobar*)@
 
 h4. Extending dotfiles aliases
 
 * Create a file *aliases.yourusername* inside ~/dotfiles/aliases/ and place your custom aliases in there.
-
-bq. alias batman='ls -la'
+**@alias batman='ls -la'@
 
 h3. Uninstalling
 
