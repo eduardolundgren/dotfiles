@@ -24,3 +24,12 @@ alias lpi='cd $LIFERAY_PORTAL/portal-impl'
 alias lps='cd $LIFERAY_PORTAL/portal-service'
 alias lpw='cd $LIFERAY_PORTAL/portal-web'
 alias start-tomcat='$LIFERAY_TOMCAT/bin/catalina.sh run && tail -f $LIFERAY_TOMCAT/logs/catalina.out'
+
+function bac {
+	cd $ALLOY_UI/src/aui-$1
+	ant all
+	cd -
+}
+
+zle -N bac
+bindkey . bac
