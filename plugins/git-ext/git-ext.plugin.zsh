@@ -17,6 +17,7 @@ alias gbd="git branch -D $1"
 compdef _git gbd=git-branch
 alias gbc="git checkout -b $1"
 compdef _git gbc=git-checkout
+alias gdl="git diff HEAD~"
 alias gconf="cat .git/config"
 alias gpob="git push origin $(current_branch)"
 alias gpom="git push origin master"
