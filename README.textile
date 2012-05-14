@@ -50,10 +50,10 @@ h2. Liferay and AlloyUI
 * A Liferay (www.liferay.com) and AlloyUI (www.alloyui.com) plugin is provided out of the box (https://github.com/eduardolundgren/dotfiles/blob/master/plugins/liferay/liferay.plugin.zsh). This plugins contains helpful commands to improve your performance doing common tasks during Liferay development.
 ** In order to make them work correctly you need to set the following variables in your *config.yourusername*
 
-@export LIFERAY_PORTAL="/liferay/github/liferay-portal";
-export ALLOY_UI="/liferay/github/alloy-ui";
-export LIFERAY_BUNDLE="/liferay/bundles/liferay-portal-trunk";
-export LIFERAY_TOMCAT="$LIFERAY_BUNDLE/tomcat-7.0.22";@
+@export LIFERAY_PORTAL="/liferay/github/liferay-portal";@
+@export ALLOY_UI="/liferay/github/alloy-ui";@
+@export LIFERAY_BUNDLE="/liferay/bundles/liferay-portal-trunk";@
+@export LIFERAY_TOMCAT="$LIFERAY_BUNDLE/tomcat-7.0.22";@
 
 h2. Contributors
 
