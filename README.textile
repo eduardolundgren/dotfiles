@@ -2,9 +2,12 @@ A handful of functions, auto-complete helpers, and stuff to make your shell rock
 
 h2. Dependencies
 
-* oh-my-zsh: A community-driven framework for managing your zsh configuration (https://github.com/robbyrussell/oh-my-zsh)
-* Git
+* Git [YOU NEED TO HAVE GIT INSTALLED]
+* Homebrew (http://mxcl.github.com/homebrew/)
 * Zsh: is a shell designed for interactive use (http://www.zsh.org/)
+* oh-my-zsh: A community-driven framework for managing your zsh configuration (https://github.com/robbyrussell/oh-my-zsh)
+
+(The automatic installer described in the next section will try to automatically install *Homebrew*, *oh-my-zsh* and *zsh* dependencies. You have to install git yourself.).
 
 h2. Setup
 
@@ -18,8 +21,27 @@ h4. via `curl`
 
 h3. Customization
 
-If you want to override any of the default behavior, just add a new file (ending in @.zsh@) into the @custom/@ directory.
-If you have many functions which go well together you can put them as a *.plugin.zsh file in the @/plugins/@ directory and then enable this plugin.
+h4. Adding a custom config file
+
+* Create a file called *config.yourusername* on the root folder of ~/dotfiles/.
+* Enable the plugins you want (take a look at https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins to see what's possible)
+** example: @plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot)@
+* Theme support: Change the @ZSH_THEME@ environment variable in your *config.yourusername*
+
+bq. ZSH_THEME="robbyrussell"
+
+** Take a look at the "current themes" :https://wiki.github.com/robbyrussell/oh-my-zsh/themes that come bundled with _Oh My Zsh_.
+
+h4. Extending dotfiles plugins
+
+* If you have many functions which go well together you can put them as a foobar.plugin.zsh file in the @/plugins/foobar/foobar.plugin.zsh@ directory and then enable this plugin.
+** example: @plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot *foobar*)@
+
+h4. Extending dotfiles aliases
+
+* Create a file *aliases.yourusername* inside ~/dotfiles/aliases/ and place your custom aliases in there.
+
+bq. alias batman='ls -la'
 
 h3. Uninstalling
 
