@@ -1,0 +1,5 @@
+#
+# Processes
+#
+alias tm="top -o vsize" # memory
+alias tu="top -o cpu" # cpu

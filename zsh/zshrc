@@ -1,0 +1,19 @@
+USER="`id -un`"
+
+# Configuration files
+source $HOME/dotfiles/config
+source $HOME/dotfiles/config.$USER
+
+# Example aliases
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
+
+COMPLETION_WAITING_DOTS="true"
+
+source $ZSH/oh-my-zsh.sh
+
+# Load all of the config files in ~/dotfiles/zsh/* that end in .zsh
+for config_file ($HOME/dotfiles/zsh/*.zsh) source $config_file
+
+# Load all of the files in ~/dotfiles/aliases/*
+for aliases_file ($HOME/dotfiles/aliases/*) source $aliases_file

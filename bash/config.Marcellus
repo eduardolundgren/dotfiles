@@ -1,5 +1,0 @@
-##
-# Terminal
-##
-
-export PS1='\u@\w \[${GREEN}\]`__git_ps1 "(%s)"`\[${NORMAL}\] : '

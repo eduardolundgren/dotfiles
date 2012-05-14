@@ -1,6 +1,0 @@
-[submodule "bash/git-pull-request"]
-	path = bash/git-pull-request
-	url = git://github.com/greneholt/git-pull-request.git
-[submodule "bash/brew-completion"]
-	path = bash/brew-completion
-	url = https://github.com/miku/brew-completion.git
