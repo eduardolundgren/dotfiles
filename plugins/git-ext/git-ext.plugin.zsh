@@ -26,8 +26,8 @@ alias gpum="git push upstream master"
 alias gra="git rebase --abort"
 alias grc="git rebase --continue"
 alias grs="git rebase --skip"
-alias gru="git pull --rebase upstream $(current_branch);"
-alias gsync="git pull --rebase upstream $(current_branch); git push origin $(current_branch)"
+alias gru="git pull --rebase upstream $(current_branch)"
+alias gsync="git pull --rebase upstream $(current_branch) && git push origin $(current_branch)"
 alias gundo='git reset --soft HEAD~1'
 
 function gcam {
