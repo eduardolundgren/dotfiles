@@ -25,7 +25,7 @@ h4. Adding a custom config file
 
 * Create a file called *config.yourusername* on the root folder of ~/dotfiles/.
 * Enable the plugins you want (take a look at https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins to see what's possible)
-** example: @plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot)@
+** example: @plugins=(ant ant-ext brew cloudapp ...)@
 ** *dotfiles* comes with the following plugins enabled: ant, ant-ext, brew, cloudapp, extract, gem, git, git-ext, git-flow, github, history-substring-search, liferay, macports, mysql, node, npm, osx, python, rake, ruby, textmate, rationalise-dot.
 * Theme support: Change the @ZSH_THEME@ environment variable in your *config.yourusername*
 ** @ZSH_THEME="robbyrussell"@
