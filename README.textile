@@ -34,12 +34,12 @@ h4. Adding a custom config file
 h4. Extending dotfiles plugins
 
 * If you have many functions which go well together you can put them as a foobar.plugin.zsh file in the @/plugins/foobar/foobar.plugin.zsh@ directory and then enable this plugin.
-** example: @plugins=(... ruby textmate rationalise-dot *foobar*)@
+** example: @plugins=(... ruby textmate rationalise-dot foobar)@
 
 h4. Extending dotfiles aliases
 
 * Create a file *aliases.yourusername* inside ~/dotfiles/aliases/ and place your custom aliases in there.
-**@alias batman='ls -la'@
+** @alias batman='ls -la'@
 
 h3. Uninstalling
 
