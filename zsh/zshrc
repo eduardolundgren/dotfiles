@@ -2,7 +2,10 @@ USER="`id -un`"
 
 # Configuration files
 source $HOME/dotfiles/config
-source $HOME/dotfiles/config.$USER
+
+if [[ -f "$HOME/dotfiles/config.$USER" ]]; then
+	source $HOME/dotfiles/config.$USER
+fi
 
 # Example aliases
 alias zshconfig="subl ~/.zshrc"
