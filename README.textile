@@ -1,0 +1,32 @@
+A handful of functions, auto-complete helpers, and stuff to make your shell rock.
+
+h2. Dependencies
+
+* oh-my-zsh: A community-driven framework for managing your zsh configuration (https://github.com/robbyrussell/oh-my-zsh)
+* Git
+* Zsh: is a shell designed for interactive use (http://www.zsh.org/)
+
+h2. Setup
+
+h3. Automatic installer
+
+You can install this via the command line with `curl`
+
+h4. via `curl`
+
+@curl -L https://github.com/eduardolundgren/dotfiles/raw/master/install.sh | sh@
+
+h3. Customization
+
+If you want to override any of the default behavior, just add a new file (ending in @.zsh@) into the @custom/@ directory.
+If you have many functions which go well together you can put them as a *.plugin.zsh file in the @/plugins/@ directory and then enable this plugin.
+
+h3. Uninstalling
+
+Not implemented yet.
+
+h2. Contributors
+
+This project wouldn't exist without all of our awesome users and contributors.
+
+Thank you so much!
