@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse example rationalise-dot)
-plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot)
+plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow git-tools github history-substring-search liferay macports mysql node npm osx python rake ruby textmate rationalise-dot)
 
 #
 # Editor

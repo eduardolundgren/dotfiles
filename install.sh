@@ -18,6 +18,12 @@ if [[ ! -d "$HOME/dotfiles" ]]; then
 	echo "done.\n"
 fi
 
+if [[ ! -d "$HOME/.git-tools" ]]; then
+	echo "==> Cloning https://github.com/liferay/git-tools.git into ~/.git-tools..."
+	git clone https://github.com/liferay/git-tools.git $HOME/.git-tools
+	echo "done.\n"
+fi
+
 echo "==> Linking ~/dotfiles/plugins folder with ~/oh-my-zsh/custom/plugins..."
 ln -s $HOME/dotfiles/plugins $HOME/.oh-my-zsh/custom/
 echo "done.\n"
