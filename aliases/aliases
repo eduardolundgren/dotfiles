@@ -1,4 +1,10 @@
 #
+# Configuration
+#
+alias edit-dotfiles='$EDITOR ~/dotfiles &'
+alias reload='zsh'
+
+#
 # Processes
 #
 alias tm="top -o vsize" # memory

@@ -15,4 +15,4 @@ plugins=(ant ant-ext brew cloudapp extract gem git git-ext git-flow git-tools gi
 #
 # Editor
 #
-export EDITOR='subl -w'
+export EDITOR='subl'
