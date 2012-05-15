@@ -43,7 +43,14 @@ echo "==> Setting zsh as your default shell..."
 chsh -s /bin/zsh
 echo "done.\n"
 
+echo "==> Installing Python Package Index..."
+sudo easy_install pip
+echo "done.\n"
+
+echo "==> Installing legit..."
+sudo pip install legit
+echo "done.\n"
+
 echo "==> Installing dependencies gems..."
-sudo gem install cloudapp_api
 sudo gem install github
 echo "done.\n"
