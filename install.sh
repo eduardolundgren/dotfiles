@@ -28,6 +28,10 @@ echo "==> Linking ~/dotfiles/plugins folder with ~/oh-my-zsh/custom/plugins..."
 ln -s $HOME/dotfiles/plugins $HOME/.oh-my-zsh/custom/
 echo "done.\n"
 
+echo "==> Linking ~/dotfiles/themes folder with ~/oh-my-zsh/custom/themes..."
+ln -s $HOME/dotfiles/themes $HOME/.oh-my-zsh/custom/
+echo "done.\n"
+
 echo "==> Adding symlink from ~/.zshrc to ~/dotfiles/zsh/zshrc..."
 if [[ -f "$HOME/.zshrc" ]]; then
 	mv ~/.zshrc ~/.zshrc_bkp
