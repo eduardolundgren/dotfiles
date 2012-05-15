@@ -16,3 +16,13 @@ plugins=(ant ant-ext brew cloudapp extract gem git git-completion git-ext git-fl
 # Editor
 #
 export EDITOR='subl'
+
+#
+# Liferay
+#
+export ALLOY_UI="$LIFERAY_GIT/alloy-ui";
+export LIFERAY_BUNDLE="$LIFERAY_BUNDLES/liferay-portal";
+export LIFERAY_PLUGINS="$LIFERAY_GIT/liferay-plugins";
+export LIFERAY_PLUGINS_EE="$LIFERAY_GIT/liferay-plugins-ee";
+export LIFERAY_PORTAL="$LIFERAY_GIT/liferay-portal";
+export LIFERAY_PORTAL_EE="$LIFERAY_GIT/liferay-portal-ee";
