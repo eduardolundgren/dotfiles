@@ -17,6 +17,7 @@ alias gbd="git branch -D"
 compdef _git gbd=git-branch
 alias gbc="git checkout -b"
 compdef _git gbc=git-checkout
+alias gbdlocal='git branch -D'
 alias gbr='git branch -m $(current_branch)'
 alias gbsw='git switch'
 alias gconf="cat .git/config"
@@ -43,14 +44,14 @@ function gcam {
 zle -N gcam
 bindkey . gcam
 
-function gbd-all {
+function gbdall {
 	git branch -D $1; git push origin :$1
 };
 
 zle -N gdb-all
 bindkey . gdb-all
 
-function gbd-remote {
+function gbdremote {
 	git push origin :$1
 };
 
