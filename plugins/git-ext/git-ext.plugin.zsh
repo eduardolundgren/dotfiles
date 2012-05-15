@@ -17,6 +17,7 @@ alias gbd="git branch -D"
 compdef _git gbd=git-branch
 alias gbc="git checkout -b"
 compdef _git gbc=git-checkout
+alias gbr='git branch -m $(current_branch)'
 alias gbsw='git switch'
 alias gconf="cat .git/config"
 alias gdl="git diff HEAD~"
