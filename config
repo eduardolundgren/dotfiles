@@ -15,7 +15,7 @@ plugins=(ant ant-ext brew cloudapp extract gem git git-completion git-ext git-fl
 #
 # Editor
 #
-export EDITOR='subl'
+export EDITOR='subl -w'
 
 #
 # Liferay
