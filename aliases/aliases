@@ -1,6 +1,7 @@
 #
 # Configuration
 #
+alias dotfiles='cd ~/dotfiles'
 alias edit-dotfiles='$EDITOR ~/dotfiles &'
 alias reload='zsh'
 
