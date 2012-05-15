@@ -1,6 +1,10 @@
 USER="`id -un`"
 
 # Configuration files
+if [[ -f "$HOME/dotfiles/settings.$USER" ]]; then
+	source $HOME/dotfiles/settings.$USER
+fi
+
 source $HOME/dotfiles/config
 
 if [[ -f "$HOME/dotfiles/config.$USER" ]]; then
