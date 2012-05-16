@@ -2,8 +2,8 @@
 # Configuration
 #
 alias dotfiles='cd ~/dotfiles'
-alias edit-dotfiles='$EDITOR ~/dotfiles &'
-alias edit-oh-my-zsh='$EDITOR ~/.oh-my-zsh &'
+alias edit-dotfiles="$EDITOR ~/dotfiles &"
+alias edit-oh-my-zsh="$EDITOR ~/.oh-my-zsh &"
 alias reload='zsh'
 
 #
