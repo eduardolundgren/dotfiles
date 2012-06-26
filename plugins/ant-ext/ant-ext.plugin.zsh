@@ -1,3 +1,5 @@
 alias aa="ant -Dlint.failonerror=false all"
 alias ad="ant deploy"
 alias ac="ant clean"
+alias acd="ant clean deploy"
+alias acdd="ant clean direct-deploy"

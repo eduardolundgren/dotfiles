@@ -3,6 +3,10 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+alias gs="git status"
+alias gsl="git stash list"
+alias ga="gitk --all"
+alias gg="git gui"
 alias gp="git push"
 compdef _git gp=git-push
 alias gpr="git pull --rebase"
