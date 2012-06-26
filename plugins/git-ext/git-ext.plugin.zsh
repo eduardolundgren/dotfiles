@@ -7,6 +7,10 @@ function roll_back() {
   git diff -p -R "$1^" "$1" > "$1".rollback
 }
 
+function git_tree {
+	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+}
+
 alias gs="git status"
 alias gsl="git stash list"
 alias ga="gitk --all"
@@ -42,5 +46,6 @@ alias grs="git rebase --skip"
 alias gru='git pull --rebase upstream $(current_branch)'
 alias gsprout='git sprout'
 alias gsync='git pull --rebase upstream $(current_branch) && git push origin $(current_branch)'
+alias gt="git_tree"
 alias gundo="git reset --soft HEAD~1"
 alias gunpublish='git unpublish'
