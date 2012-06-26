@@ -39,25 +39,3 @@ alias gsprout='git sprout'
 alias gsync='git pull --rebase upstream $(current_branch) && git push origin $(current_branch)'
 alias gundo="git reset --soft HEAD~1"
 alias gunpublish='git unpublish'
-
-function gcam {
-	git add -A
-	git commit -a -m "$*"
-}
-
-zle -N gcam
-bindkey . gcam
-
-function gbdall {
-	git branch -D $1; git push origin :$1
-};
-
-zle -N gdb-all
-bindkey . gdb-all
-
-function gbdremote {
-	git push origin :$1
-};
-
-zle -N gdb-remote
-bindkey . gdb-remote
