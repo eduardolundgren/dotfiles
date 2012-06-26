@@ -3,6 +3,10 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
+function roll_back() {
+  git diff -p -R "$1^" "$1" > "$1".rollback
+}
+
 alias gs="git status"
 alias gsl="git stash list"
 alias ga="gitk --all"
@@ -30,6 +34,7 @@ alias gpob='git push origin $(current_branch)'
 alias gpub='git push upstream $(current_branch)'
 alias gpublish='git publish'
 alias gra="git rebase --abort"
+alias grb="roll_back"
 alias grc="git rebase --continue"
 alias grehard="git reset --hard"
 alias gresoft="git reset --soft"
