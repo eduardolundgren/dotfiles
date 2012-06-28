@@ -32,8 +32,8 @@ fi
 if [[ -d "$HOME/dotfiles" ]]; then
 	echo "==> Checking ~/dotfiles... OK"
 else
-	echo "==> Cloning https://github.com/eduardolundgren/dotfiles.git into ~/dotfiles..."
-	git clone https://github.com/eduardolundgren/dotfiles.git $HOME/dotfiles
+	echo "==> Cloning https://github.com/tmoreira2020/dotfiles.git into ~/dotfiles..."
+	git clone https://github.com/tmoreira2020/dotfiles.git $HOME/dotfiles
 	echo "==> OK"
 fi
 
