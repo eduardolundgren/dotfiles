@@ -11,6 +11,7 @@ function git_tree {
 	git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 }
 
+alias gd="git diff"
 alias gs="git status"
 alias gsl="git stash list"
 alias ga="gitk --all"
