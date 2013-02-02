@@ -21,5 +21,5 @@ function git-delete-history {
     git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch $files" HEAD
 
     # remove the temporary history git-filter-branch otherwise leaves behind for a long time
-    rm -rf .git/refs/original/ && git reflog expire --all &&  git gc --aggressive --prune
+    rm -rf .git/refs/original/ && git reflog expire --all &&  git gc --aggressive --prune && git filter-branch --commit-filter 'git_commit_non_empty_tree "$@"' HEAD
 }
