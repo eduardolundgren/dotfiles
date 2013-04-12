@@ -45,6 +45,14 @@ else
 	echo "==> OK"
 fi
 
+if [[ -d "$HOME/.z" ]]; then
+	echo "==> Checking ~/.z... OK"
+else
+	echo "==> Cloning https://github.com/rupa/z.git into ~/.z..."
+	git clone https://github.com/rupa/z.git $HOME/.z
+	echo "==> OK"
+fi
+
 if [[ -d "$HOME/.oh-my-zsh/custom/plugins" ]]; then
 	echo "==> Checking symlink $HOME/.oh-my-zsh/custom/plugins... OK"
 else
