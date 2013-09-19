@@ -37,6 +37,18 @@ alias gsprout='git sprout'
 alias gsync='git pull --rebase upstream $(current_branch) && git push origin $(current_branch)'
 alias gundo="git reset --soft HEAD~1"
 alias gunpublish='git unpublish'
+function glog {
+	if [ -z "$1" ]
+	then
+	   1=-1
+	fi
+
+	git log --graph --pretty=format:'%Cred%h%Creset %C(bold green)%an [%ad]%Creset -> %C(bold blue)%cn [%cd]%Creset ->%C(yellow)%d%Creset %s' --abbrev-commit --date=relative --max-count=$*
+}
+
+function gdiff {
+	git diff --color --stat $1..$2
+}
 
 function gcam {
 	git add -A
