@@ -19,6 +19,10 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
 
+# Disable auto correct
+unsetopt correct_all
+unsetopt correct
+
 # Load all of the config files in ~/dotfiles/zsh/* that end in .zsh
 for config_file ($HOME/dotfiles/zsh/*.zsh) source $config_file
 
