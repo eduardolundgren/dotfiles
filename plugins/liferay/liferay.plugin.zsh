@@ -19,8 +19,8 @@ alias dpi='lpi; ant deploy;cd -;'
 alias dps='lps; ant deploy;cd -;'
 alias dpw='lpw; ant deploy;cd -;'
 alias fs='lpi; ant format-source;cd -;'
-alias import-alloy-zip-old='cd $ALLOY_UI; ant release; cp alloy-2.0.0pr4.zip $LIFERAY_PORTAL/portal-web/third-party; cd $LIFERAY_PORTAL; ba'
-alias import-alloy-zip='cd $ALLOY_UI; cp alloy-2.0.0pr4.zip $LIFERAY_PORTAL/portal-web/third-party; cd $LIFERAY_PORTAL; ba'
+alias import-alloy-zip-old='cd $ALLOY_UI; ant release; cp alloy-2.0.0pr7.zip $LIFERAY_PORTAL/portal-web/third-party; cd $LIFERAY_PORTAL; ba'
+alias import-alloy-zip='cd $ALLOY_UI; cp alloy-2.0.0pr7.zip $LIFERAY_PORTAL/portal-web/third-party; cd $LIFERAY_PORTAL; ba'
 alias liferay-bundle='cd $LIFERAY_BUNDLE'
 alias liferay-bundles='cd $LIFERAY_BUNDLES'
 alias liferay-git='cd $LIFERAY_GIT'
@@ -33,8 +33,6 @@ alias lpi='cd $LIFERAY_PORTAL/portal-impl'
 alias lps='cd $LIFERAY_PORTAL/portal-service'
 alias lpw='cd $LIFERAY_PORTAL/portal-web'
 alias start-tomcat='./bin/catalina.sh run && tail -f ./logs/catalina.out'
-
-alias ya='yogi alloy'
 
 function bac {
 	cd $ALLOY_UI/src/aui-$1
