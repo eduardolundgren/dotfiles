@@ -57,7 +57,8 @@ if [[ -d "$HOME/.oh-my-zsh/custom/plugins" ]]; then
 	echo "==> Checking symlink $HOME/.oh-my-zsh/custom/plugins... OK"
 else
 	echo "==> Linking ~/dotfiles/plugins folder with ~/oh-my-zsh/custom/plugins..."
-	ln -s $HOME/dotfiles/plugins $HOME/.oh-my-zsh/custom/
+	mkdir -p $HOME/.oh-my-zsh/custom-dotfiles
+	ln -s $HOME/dotfiles/plugins $HOME/.oh-my-zsh/custom-dotfiles/
 	echo "==> OK"
 fi
 
@@ -65,7 +66,7 @@ if [[ -d "$HOME/.oh-my-zsh/custom/themes" ]]; then
 	echo "==> Checking symlink $HOME/.oh-my-zsh/custom/themes... OK"
 else
 	echo "==> Linking ~/dotfiles/themes folder with ~/oh-my-zsh/custom/themes..."
-	ln -s $HOME/dotfiles/themes $HOME/.oh-my-zsh/custom/
+	ln -s $HOME/dotfiles/themes $HOME/.oh-my-zsh/custom-dotfiles/
 	echo "==> OK"
 fi
 

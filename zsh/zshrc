@@ -17,6 +17,8 @@ alias ohmyzsh="subl ~/.oh-my-zsh"
 
 #COMPLETION_WAITING_DOTS="true"
 
+export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom-dotfiles"
+
 source $ZSH/oh-my-zsh.sh
 
 # Disable auto correct
