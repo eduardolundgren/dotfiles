@@ -53,7 +53,7 @@ else
 	echo "==> OK"
 fi
 
-if [[ -d "$HOME/.oh-my-zsh/custom/plugins" ]]; then
+if [[ -d "$HOME/.oh-my-zsh/custom-dotfiles/plugins" ]]; then
 	echo "==> Checking symlink $HOME/.oh-my-zsh/custom/plugins... OK"
 else
 	echo "==> Linking ~/dotfiles/plugins folder with ~/oh-my-zsh/custom/plugins..."
@@ -62,7 +62,7 @@ else
 	echo "==> OK"
 fi
 
-if [[ -d "$HOME/.oh-my-zsh/custom/themes" ]]; then
+if [[ -d "$HOME/.oh-my-zsh/custom-dotfiles/themes" ]]; then
 	echo "==> Checking symlink $HOME/.oh-my-zsh/custom/themes... OK"
 else
 	echo "==> Linking ~/dotfiles/themes folder with ~/oh-my-zsh/custom/themes..."
