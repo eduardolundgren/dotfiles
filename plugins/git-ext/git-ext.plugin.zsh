@@ -12,6 +12,7 @@ compdef _git gsl=git-stash
 alias gsa="git stash apply"
 compdef _git gsa=git-stash
 alias gss="git stash save"
+alias gsp="git stash pop"
 compdef _git gss=git-stash
 alias gbd="git branch -D"
 compdef _git gbd=git-branch
