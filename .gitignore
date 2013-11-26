@@ -1,3 +1,2 @@
-config.*
-settings.*
-aliases/aliases.*
+node_modules
+npm-debug.log
