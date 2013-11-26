@@ -223,32 +223,32 @@ module.exports = function(grunt) {
                 cmd: 'source <%= config.osx.path_osx %>'
             },
 
-            zsh: {
-                cmd: 'chsh -s /bin/zsh'
-            },
-
             z: {
                 cmd: 'touch <%= config.zsh.path_z %>'
             },
 
+            zsh: {
+                cmd: 'chsh -s /bin/zsh'
+            },
+
             node_latest: {
-                cmd: 'n latest &> /dev/null'
+                cmd: 'sudo n latest &> /dev/null'
             },
 
             node_stable: {
-                cmd: 'n stable &> /dev/null'
+                cmd: 'sudo n stable &> /dev/null'
             },
 
             ruby_compass: {
-                cmd: 'gem install compass'
+                cmd: 'sudo gem install compass'
             },
 
             ruby_jekyll: {
-                cmd: 'gem install jekyll'
+                cmd: 'sudo gem install jekyll'
             },
 
             ruby_update: {
-                cmd: 'gem update --system'
+                cmd: 'sudo gem update --system'
             }
 
         }
