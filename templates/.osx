@@ -230,6 +230,9 @@ if [[ OSX ]]; then
     # Minimize windows into their application’s icon
     defaults write com.apple.dock minimize-to-application -bool true
 
+    # Enable spring loading for all Dock items
+    defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
     # Don’t show Dashboard as a Space
     defaults write com.apple.dock dashboard-in-overlay -bool true
 
