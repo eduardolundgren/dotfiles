@@ -17,6 +17,22 @@ module.exports = function(grunt) {
 
         // -- Config -----------------------------------------------------------
 
+        bump: {
+            options: {
+                commit: true,
+                commitFiles: ['package.json'],
+                commitMessage: 'Release v%VERSION%',
+                createTag: true,
+                files: ['package.json'],
+                push: true,
+                pushTo: 'origin',
+                tagMessage: '',
+                tagName: 'v%VERSION%'
+            }
+        },
+
+        // -- Config -----------------------------------------------------------
+
         config: {
 
             git: {
@@ -239,6 +255,7 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-git');

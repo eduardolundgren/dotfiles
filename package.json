@@ -24,14 +24,15 @@
   ],
   "dependencies": {
     "grunt": "~0.4.2",
+    "grunt-bump": "0.0.11",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.4.1",
     "grunt-exec": "~0.4.2",
     "grunt-git": "~0.2.1",
     "grunt-prompt": "~0.1.2",
     "grunt-symlink": "~0.4.0",
-    "userhome": "~0.1.0",
-    "grunt-template": "~0.2.1"
+    "grunt-template": "~0.2.1",
+    "userhome": "~0.1.0"
   },
   "peerDependencies": {
     "bower": ">=0.9.0",
