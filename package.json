@@ -1,0 +1,43 @@
+{
+  "name": "dotfiles",
+  "description": "The first JavaScript based dotfiles.",
+  "version": "0.0.0",
+  "author": {
+    "email": "eduardolundgren@gmail.com",
+    "name": "Eduardo Lundgren",
+    "twitter": "eduardolundgren",
+    "web": "http://eduardo.io"
+  },
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:eduardolundgren/dotfiles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eduardolundgren/dotfiles/issues"
+  },
+  "keywords": [
+    "cli",
+    "dotfiles",
+    "grunt",
+    "javascript"
+  ],
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-exec": "~0.4.2",
+    "grunt-git": "~0.2.1",
+    "grunt-prompt": "~0.1.2",
+    "grunt-symlink": "~0.4.0",
+    "userhome": "~0.1.0",
+    "grunt-template": "~0.2.1"
+  },
+  "peerDependencies": {
+    "bower": ">=0.9.0",
+    "docpad": "~6.54.10",
+    "grunt-cli": "~0.1.7",
+    "jshint": "~2.3.0",
+    "n": "~1.1.0"
+  }
+}
