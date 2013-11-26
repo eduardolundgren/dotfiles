@@ -1,0 +1,75 @@
+[user]
+    name = <%- git.name %>
+    email = <%- git.email %>
+    editor = <%- editor %>
+[alias]
+    # Add
+    ad = add
+    aa = add .
+
+    # Commit
+    cm = commit -m
+    ca = commit --amend -m
+
+    # Checkout
+    co = checkout
+    cb = checkout -b
+
+    # Cherry-pick
+    cp = cherry-pick
+
+    # Diff
+    df = diff
+
+    # List
+    tl = tag -l
+    bl = branch -a
+    rl = remote -v
+
+    # Status
+    st = status -s
+
+    # Pull
+    pl   = pull
+    plo  = pull --rebase origin
+    plom = pull --rebase origin master
+    plog = pull --rebase origin gh-pages
+    plu  = pull --rebase upstream
+    plum = pull --rebase upstream master
+    plug = pull --rebase upstream gh-pages
+
+    # Push
+    ps   = push
+    pso  = push origin
+    psom = push origin master
+    psog = push origin gh-pages
+    psu  = push upstream
+    psum = push upstream master
+    psug = push upstream gh-pages
+
+    # Logs
+    l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
+    ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+    # Sync
+    sync = plu && pso
+[color]
+  diff = auto
+  status = auto
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added     = cyan bold
+    branch    = cyan bold
+    changed   = magenta bold
+    deleted   = red bold
+    untracked = yellow bold
+[push]
+    # 'git push' will push the current branch to its tracking branch
+    # the usual default is to push all branches
+    default = tracking
+[core]
+    excludesfile = ~/.gitignore_global
