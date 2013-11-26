@@ -35,6 +35,7 @@
     "grunt-prompt": "~0.1.2",
     "grunt-symlink": "~0.4.0",
     "grunt-template": "~0.2.1",
+    "update-notifier": "~0.1.7",
     "userhome": "~0.1.0",
     "which": "~1.0.5"
   },

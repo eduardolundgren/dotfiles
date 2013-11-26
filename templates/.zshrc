@@ -26,3 +26,6 @@ unsetopt correct
 if [[ -f "$HOME/.aliases" ]]; then
     source $HOME/.aliases
 fi
+
+# Check for dotfiles updates.
+dotfiles
