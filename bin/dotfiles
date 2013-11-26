@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+/*
+ * Copyright 2013, All Rights Reserved.
+ *
+ * Code licensed under the BSD License:
+ * https://github.com/eduardolundgren/dotfiles/blob/master/LICENSE.md
+ *
+ * @author Eduardo Lundgren <eduardo.lundgren@gmail.com>
+ */
+
+'use strict';
+
+// -- Requires -----------------------------------------------------------------
+
+var argv = process.argv,
+    path = require('path'),
+    spawn = require('child_process').spawn,
+    which = require('which').sync;
+
+// -- Run ----------------------------------------------------------------------
+
+// Normalize arguments.
+argv.splice(0, 2);
+
+// Spawn grunt like it was executed from the dotfiles directory.
+spawn(which('grunt'), argv, {
+  cwd: path.join(__dirname, '..'),
+  env: process.env,
+  stdio: 'inherit'
+});
