@@ -263,6 +263,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-symlink');
     grunt.loadNpmTasks('grunt-template');
 
-    grunt.registerTask('default', ['clean', 'prompt', 'template', 'gitclone', 'exec', 'symlink']);
+    grunt.registerTask('setup', ['clean', 'prompt', 'template', 'gitclone', 'exec', 'symlink']);
 
 };
