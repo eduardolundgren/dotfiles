@@ -104,7 +104,7 @@ All my command-line tools and its configurations. Have fun :)
 * General: automatically quit printer app once the print jobs complete
 * General: automatically rearrange Spaces based on most recent use
 * General: create .DS_Store files on network volumes
-* General: enable "natural" (Lion-style) scrolling
+* General: disable "natural" (Lion-style) scrolling
 * General: enable auto-correct
 * General: enable Dashboard as an overlay
 * General: enable HiDPI display modes (requires restart)
