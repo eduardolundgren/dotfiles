@@ -86,7 +86,6 @@ All my command-line tools and its configurations. Have fun :)
 * Disable the “Are you sure you want to open this application?” dialog
 * Disable “natural” (Lion-style) scrolling
 * Display full POSIX path as Finder window title
-* Dock, Dashboard, and hot corners                                            #
 * Don’t animate opening applications from the Dock
 * Don’t automatically rearrange Spaces based on most recent use
 * Don’t display the annoying prompt when quitting iTerm
@@ -120,7 +119,6 @@ All my command-line tools and its configurations. Have fun :)
 * Remove the auto-hiding Dock delay
 * Remove the spring loading delay for directories
 * Require password immediately after sleep or screen saver begins
-* Reset Launchpad
 * Restart automatically if the computer freezes
 * Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
 * Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
