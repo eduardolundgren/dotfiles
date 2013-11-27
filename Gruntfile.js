@@ -49,9 +49,14 @@ module.exports = function(grunt) {
                 path_rbenv: userhome('.rbenv')
             },
 
+            themes: {
+                path_dracula: userhome('.themes/dracula'),
+            },
+
             zsh: {
                 path_oh_my_zsh: userhome('.oh-my-zsh'),
                 path_syntax_highlighting: userhome('.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'),
+                path_theme_dracula: userhome('.oh-my-zsh/themes/dracula.zsh-theme'),
                 path_z: userhome('.z'),
                 path_zshrc: userhome('.zshrc')
             }
@@ -106,7 +111,7 @@ module.exports = function(grunt) {
                         },
                         {
                             config: 'config.zsh.theme_oh_my_zsh',
-                            default: 'robbyrussell',
+                            default: 'dracula',
                             message: 'Which Oh my zsh! theme would you like to use (https://github.com/robbyrussell/oh-my-zsh/tree/master/themes)?'
                         }
                     ]
@@ -128,8 +133,10 @@ module.exports = function(grunt) {
                     '<%= config.osx.path_osx %>',
                     '<%= config.ruby.path_build %>',
                     '<%= config.ruby.path_rbenv %>',
-                    '<%= config.zsh.path_syntax_highlighting %>',
+                    '<%= config.themes.path_dracula %>',
                     '<%= config.zsh.path_oh_my_zsh %>',
+                    '<%= config.zsh.path_syntax_highlighting %>',
+                    '<%= config.zsh.path_theme_dracula %>',
                     '<%= config.zsh.path_zshrc %>'
                 ]
             }
@@ -195,6 +202,13 @@ module.exports = function(grunt) {
                 }
             },
 
+            theme_dracula: {
+                options: {
+                    directory: '<%= config.themes.path_dracula %>',
+                    repository: 'https://github.com/zenorocha/dracula-theme.git'
+                }
+            },
+
             zsh_syntax_highlighting: {
                 options: {
                     directory: '<%= config.zsh.path_syntax_highlighting %>',
@@ -211,6 +225,11 @@ module.exports = function(grunt) {
             sublime: {
                 dest: '/usr/local/bin/subl',
                 relativeSrc: '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+            },
+
+            zsh_theme_dracula: {
+                dest: '<%= config.zsh.path_theme_dracula %>',
+                relativeSrc: '<%= config.themes.path_dracula %>/zsh/dracula.zsh-theme'
             }
 
         },
@@ -229,6 +248,10 @@ module.exports = function(grunt) {
 
             zsh: {
                 cmd: 'chsh -s /bin/zsh'
+            },
+
+            theme_iterm: {
+                cmd: 'open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors'
             },
 
             node_latest: {
