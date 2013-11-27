@@ -76,7 +76,6 @@ All my command-line tools and its configurations. Have fun :)
 * Avoid creating .DS_Store files on network volumes
 * Disable auto-correct
 * Disable press-and-hold for keys in favor of key repeat
-* Disable shadow in screenshots
 * Disable smart dashes as they’re annoying when typing code
 * Disable smart quotes as they’re annoying when typing code
 * Disable the sound effects on boot
