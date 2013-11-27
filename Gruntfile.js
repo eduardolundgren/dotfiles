@@ -18,6 +18,7 @@ module.exports = function(grunt) {
         // -- Bump -------------------------------------------------------------
 
         bump: {
+
             options: {
                 commit: true,
                 commitFiles: ['package.json'],
@@ -29,6 +30,7 @@ module.exports = function(grunt) {
                 tagMessage: '',
                 tagName: 'v%VERSION%'
             }
+
         },
 
         // -- Config -----------------------------------------------------------
@@ -66,6 +68,7 @@ module.exports = function(grunt) {
         // -- Prompt -----------------------------------------------------------
 
         prompt: {
+
             config: {
                 options: {
                     questions: [
@@ -102,6 +105,7 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+
         },
 
         // -- Clean ------------------------------------------------------------
