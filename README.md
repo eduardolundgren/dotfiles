@@ -23,6 +23,14 @@ $ dotfiles setup
 
 This will symlink the appropriate files into your home directory. It may ask your password multiple times during the process.
 
+## How to update?
+
+```sh
+$ dotfiles
+```
+
+Just type `dotfiles` and it lets you know when updates are available.
+
 ## What's included?
 
 All my command-line tools and its configurations. Have fun :)
@@ -59,13 +67,6 @@ All my command-line tools and its configurations. Have fun :)
 * [Compass](http://compass-style.org/) for Sass programming
 * [Jekyll](http://jekyllrb.com/) for static generated website development
 
-## How to update?
-
-```sh
-$ dotfiles
-```
-
-Just type `dotfiles` and it lets you know when updates are available.
 
 ## Credits
 
