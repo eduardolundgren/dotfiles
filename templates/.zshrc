@@ -10,12 +10,14 @@ ZSH="<%- zsh.path_oh_my_zsh %>"
 ZSH_THEME="<%- zsh.theme_oh_my_zsh %>"
 
 # -- Plugins -------------------------------------------------------------------
-# Which plugins would you like to load? (plugins can be found in <%- zsh.path_oh_my_zsh %>/plugins/*)
+# Plugins can be found in <%- zsh.path_oh_my_zsh %>/plugins/
 # Custom plugins may be added to <%- zsh.path_oh_my_zsh %>/custom/plugins/
+#
+# Which plugins would you like to load?
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(<%- zsh.plugins %>)
 
-# -- Oh My Zsh! ----------------------------------------------------------------
+# -- Oh My Zsh -----------------------------------------------------------------
 source $ZSH/oh-my-zsh.sh
 
 # -- Options -------------------------------------------------------------------

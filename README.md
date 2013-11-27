@@ -1,6 +1,6 @@
 # Eduardo's dotfiles
 
-![Preview](http://f.cl.ly/items/3i1Z3k0Z260P3V1A1s3M/dotfiles.png)
+![Preview](http://f.cl.ly/items/423c1j0C0r0x1c0C033f/dotfiles.png)
 
 ## Dependencies
 
@@ -10,7 +10,7 @@
 ## How to install?
 
 ```sh
-$ sudo npm install dotfiles -g
+$ [sudo] npm install -g dotfiles
 ```
 
 This will install [dotfiles](http://npmjs.org/dotfiles) from [NPM](http://npmjs.org).
@@ -139,13 +139,12 @@ All my command-line tools and its configurations. Have fun :)
 * Use columns view in all Finder windows by default
 * Use scroll gesture with the Ctrl (^) modifier key to zoom
 * When performing a search, search the current folder by default
-* For the full configuration list [click here](https://github.com/eduardolundgren/dotfiles/blob/master/templates/.osx)
+
+For the full configuration list [click here](https://github.com/eduardolundgren/dotfiles/blob/master/templates/.osx)
 
 ## Credits
 
-* Iterative installation based on [@holman's dotfiles](https://github.com/holman/dotfiles)
-* OSX defaults based on [@mathiasbynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
-* Colorful logs based on [@davidsonfellipe's dotfiles](https://github.com/davidsonfellipe/dotfiles)
+* OS X defaults based on [@mathiasbynens's dotfiles](https://github.com/mathiasbynens/dotfiles)
 * Themes based on [@zenorocha's dracula](https://github.com/zenorocha/dracula-theme)
 
 ## Contributing

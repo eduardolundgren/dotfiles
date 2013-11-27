@@ -11,9 +11,9 @@ if [[ OSX ]]; then
     # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
     while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-    ###############################################################################
-    # General UI/UX                                                               #
-    ###############################################################################
+    ############################################################################
+    # General UI/UX                                                            #
+    ############################################################################
 
     # Set computer name (as done via System Preferences → Sharing)
     sudo scutil --set ComputerName "<%- osx.computername %>"
@@ -50,9 +50,9 @@ if [[ OSX ]]; then
     # Disable smart dashes as they’re annoying when typing code
     defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-    ###############################################################################
-    # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
-    ###############################################################################
+    ############################################################################
+    # Trackpad, mouse, keyboard, Bluetooth accessories, and input              #
+    ############################################################################
 
     # Trackpad: enable tap to click for this user and for the login screen
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -103,9 +103,9 @@ if [[ OSX ]]; then
     # Disable auto-correct
     defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-    ###############################################################################
-    # Screen                                                                      #
-    ###############################################################################
+    ############################################################################
+    # Screen                                                                   #
+    ############################################################################
 
     # Require password immediately after sleep or screen saver begins
     defaults write com.apple.screensaver askForPassword -int 1
@@ -127,9 +127,9 @@ if [[ OSX ]]; then
     # Enable HiDPI display modes (requires restart)
     sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
 
-    ###############################################################################
-    # Finder                                                                      #
-    ###############################################################################
+    ############################################################################
+    # Finder                                                                   #
+    ############################################################################
 
     # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
     defaults write com.apple.finder QuitMenuItem -bool true
@@ -217,9 +217,9 @@ if [[ OSX ]]; then
     # Show the ~/Library folder
     chflags nohidden ~/Library
 
-    ###############################################################################
-    # Dock, Dashboard, and hot corners                                            #
-    ###############################################################################
+    ############################################################################
+    # Dock, Dashboard, and hot corners                                         #
+    ############################################################################
 
     # Enable highlight hover effect for the grid view of a stack (Dock)
     defaults write com.apple.dock mouse-over-hilite-stack -bool true
@@ -285,9 +285,9 @@ if [[ OSX ]]; then
     defaults write com.apple.dock wvous-br-corner -int 11
     defaults write com.apple.dock wvous-br-modifier -int 0
 
-    ###############################################################################
-    # Terminal & iTerm 2                                                          #
-    ###############################################################################
+    ############################################################################
+    # Terminal & iTerm 2                                                       #
+    ############################################################################
 
     # Only use UTF-8 in Terminal.app
     defaults write com.apple.terminal StringEncodings -array 4
@@ -295,9 +295,9 @@ if [[ OSX ]]; then
     # Don’t display the annoying prompt when quitting iTerm
     defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-    ###############################################################################
-    # Kill affected applications                                                  #
-    ###############################################################################
+    ############################################################################
+    # Kill affected applications                                               #
+    ############################################################################
 
     for app in "Dock" "Finder" "SystemUIServer" "Terminal" "iCal"; do
         killall "${app}" > /dev/null 2>&1
