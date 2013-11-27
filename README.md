@@ -129,7 +129,7 @@ All my command-line tools and its configurations. Have fun :)
 * Restart automatically if the computer freezes
 * Reveal IP address, hostname, OS version, etc. when clicking the clock
 * Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-* Save screenshots to ~/Screenshots
+* Save screenshots to ~/Desktop
 * Set a blazingly fast keyboard repeat rate
 * Set computer name (as done via System Preferences → Sharing)
 * Set language and text formats
