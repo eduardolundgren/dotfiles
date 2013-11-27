@@ -250,6 +250,10 @@ module.exports = function(grunt) {
                 cmd: 'chsh -s /bin/zsh'
             },
 
+            theme_alfred: {
+                cmd: 'open <%= config.themes.path_dracula %>/alfred/Dracula.alfredappearance'
+            },
+
             theme_iterm: {
                 cmd: 'open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors'
             },
