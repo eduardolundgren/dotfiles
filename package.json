@@ -1,6 +1,6 @@
 {
   "name": "dotfiles",
-  "description": "The first JavaScript based dotfiles powered by Grunt.",
+  "description": "The first JavaScript-based dotfiles powered by Grunt.",
   "version": "0.1.0",
   "author": {
     "email": "eduardolundgren@gmail.com",
