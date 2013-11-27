@@ -25,6 +25,8 @@ $ dotfiles setup
 
 This will symlink the appropriate files into your home directory. It may ask your password multiple times during the process.
 
+You could also setup things separated by running `setup:alfred`, `setup:git`, `setup:iterm`, `setup:osx`, `setup:ruby`, or `setup:zsh`.
+
 ## How to update?
 
 ```sh
