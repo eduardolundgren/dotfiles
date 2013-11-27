@@ -75,21 +75,6 @@ module.exports = function(grunt) {
                             message: 'Which computer name would you like to use?'
                         },
                         {
-                            config: 'config.osx.hostname',
-                            default: 'eduardo',
-                            message: 'Which hostname would you like to use?'
-                        },
-                        {
-                            config: 'config.osx.localhostname',
-                            default: 'eduardo',
-                            message: 'Which local hostname would you like to use?'
-                        },
-                        {
-                            config: 'config.osx.netbiosname',
-                            default: 'eduardo',
-                            message: 'Which netbios name would you like to use?'
-                        },
-                        {
                             config: 'config.git.name',
                             default: 'Eduardo Lundgren',
                             message: 'Which Git name would you like to use?'

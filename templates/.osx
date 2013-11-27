@@ -17,9 +17,9 @@ if [[ OSX ]]; then
 
     # Set computer name (as done via System Preferences → Sharing)
     sudo scutil --set ComputerName "<%- osx.computername %>"
-    sudo scutil --set HostName "<%- osx.hostname %>"
-    sudo scutil --set LocalHostName "<%- osx.localhostname %>"
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "<%- osx.netbiosname %>"
+    sudo scutil --set HostName "<%- osx.computername %>"
+    sudo scutil --set LocalHostName "<%- osx.computername %>"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "<%- osx.computername %>"
 
     # Disable the sound effects on boot
     sudo nvram SystemAudioVolume=" "
