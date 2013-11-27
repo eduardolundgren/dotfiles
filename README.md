@@ -1,5 +1,7 @@
 # Eduardo's dotfiles
 
+The first JavaScript based dotfiles powered by [Grunt](http://gruntjs.com/).
+
 ![Preview](http://f.cl.ly/items/423c1j0C0r0x1c0C033f/dotfiles.png)
 
 ## Dependencies
