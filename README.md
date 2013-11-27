@@ -4,8 +4,8 @@
 
 ## Dependencies
 
-1. Install [NodeJS](http://nodejs.org/download/), if you don't have it yet.
-2. Install [Git](http://git-scm.com) for code versioning.
+1. Install [Git](http://git-scm.com), if you don't have it yet.
+2. Install [NodeJS](http://nodejs.org/download/), if you don't have it yet.
 
 ## How to install?
 
