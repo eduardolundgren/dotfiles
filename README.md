@@ -69,7 +69,6 @@ All my command-line tools and its configurations. Have fun :)
 
 ###### OSX
 
-* Ask for the administrator password upfront
 * Automatically hide and show the Dock
 * Automatically illuminate built-in MacBook keyboard in low light
 * Automatically open a new Finder window when a volume is mounted
