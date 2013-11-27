@@ -282,6 +282,10 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.task.registerTask('banner', function() {
+        console.log(grunt.file.read('templates/.banner'));
+    });
+
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-git');
@@ -290,6 +294,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-symlink');
     grunt.loadNpmTasks('grunt-template');
 
-    grunt.registerTask('setup', ['clean', 'prompt', 'template', 'gitclone', 'shell', 'symlink']);
+    grunt.registerTask('setup', ['banner', 'prompt', 'clean', 'template', 'gitclone', 'shell', 'symlink']);
 
 };
