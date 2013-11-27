@@ -1,5 +1,3 @@
-'use strict';
-
 /*
  * Copyright 2013, All Rights Reserved.
  *
@@ -8,6 +6,8 @@
  *
  * @author Eduardo Lundgren <eduardo.lundgren@gmail.com>
  */
+
+'use strict';
 
 var userhome = require('userhome');
 
