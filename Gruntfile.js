@@ -107,12 +107,12 @@ module.exports = function(grunt) {
                         {
                             config: 'config.zsh.plugins',
                             default: 'ant git history-substring-search z zsh-syntax-highlighting',
-                            message: 'Which Oh my zsh! plugins would you like to use (https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins)?'
+                            message: 'Which Oh-my-zsh plugins would you like to use (https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins)?'
                         },
                         {
                             config: 'config.zsh.theme_oh_my_zsh',
                             default: 'dracula',
-                            message: 'Which Oh my zsh! theme would you like to use (https://github.com/robbyrussell/oh-my-zsh/tree/master/themes)?'
+                            message: 'Which Oh-my-zsh theme would you like to use (https://github.com/zenorocha/dracula-theme)?'
                         }
                     ]
                 }
