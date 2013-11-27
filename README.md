@@ -127,7 +127,9 @@ All my command-line tools and its configurations. Have fun :)
 * Set a blazingly fast keyboard repeat rate
 * Set computer name (as done via System Preferences → Sharing)
 * Set language and text formats
-* Set the icon size of Dock items to 36 pixels
+* Set the icon size of Dock items to 48 pixels
+* Enable magnification
+* Set magnification icon size to 80 pixels
 * Show icons for hard drives, servers, and removable media on the desktop
 * Show item info near icons on the desktop and in other icon views
 * Show item info to the right of the icons on the desktop
