@@ -84,7 +84,7 @@ All my command-line tools and its configurations. Have fun :)
 * Dock: make icons of hidden applications translucent
 * Dock: minimize windows into their application's icon
 * Enable full keyboard access for all controls
-* Enable hot corners
+* Disable hot corners
 * Enable snap-to-grid for icons on the desktop and in other icon views
 * Enable subpixel font rendering on non-Apple LCDs
 * Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
