@@ -236,46 +236,46 @@ module.exports = function(grunt) {
 
         // -- Exec -------------------------------------------------------------
 
-        exec: {
+        shell: {
 
             osx: {
-                cmd: 'source <%= config.osx.path_osx %>'
+                command: 'source <%= config.osx.path_osx %>'
             },
 
             z: {
-                cmd: 'touch <%= config.zsh.path_z %>'
+                command: 'touch <%= config.zsh.path_z %>'
             },
 
             zsh: {
-                cmd: 'chsh -s /bin/zsh'
+                command: 'chsh -s /bin/zsh'
             },
 
             theme_alfred: {
-                cmd: 'open <%= config.themes.path_dracula %>/alfred/Dracula.alfredappearance'
+                command: 'open <%= config.themes.path_dracula %>/alfred/Dracula.alfredappearance'
             },
 
             theme_iterm: {
-                cmd: 'open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors'
+                command: 'open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors'
             },
 
             node_latest: {
-                cmd: 'sudo n latest &> /dev/null'
+                command: 'sudo n latest'
             },
 
             node_stable: {
-                cmd: 'sudo n stable &> /dev/null'
+                command: 'sudo n stable'
             },
 
             ruby_compass: {
-                cmd: 'sudo gem install compass'
+                command: 'sudo gem install compass'
             },
 
             ruby_jekyll: {
-                cmd: 'sudo gem install jekyll'
+                command: 'sudo gem install jekyll'
             },
 
             ruby_update: {
-                cmd: 'sudo gem update --system'
+                command: 'sudo gem update --system'
             }
 
         }
@@ -284,12 +284,12 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-bump');
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-git');
     grunt.loadNpmTasks('grunt-prompt');
+    grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-symlink');
     grunt.loadNpmTasks('grunt-template');
 
-    grunt.registerTask('setup', ['clean', 'prompt', 'template', 'gitclone', 'exec', 'symlink']);
+    grunt.registerTask('setup', ['clean', 'prompt', 'template', 'gitclone', 'shell', 'symlink']);
 
 };
