@@ -112,17 +112,45 @@ module.exports = function(grunt) {
 
         clean: {
 
-            all: {
+            git: {
                 options: {
                     force: true
                 },
                 src: [
                     '<%= config.git.path_gitconfig %>',
-                    '<%= config.git.path_gitignore %>',
-                    '<%= config.osx.path_osx %>',
+                    '<%= config.git.path_gitignore %>'
+                ]
+            },
+            osx: {
+                options: {
+                    force: true
+                },
+                src: [
+                    '<%= config.osx.path_osx %>'
+                ]
+            },
+            ruby: {
+                options: {
+                    force: true
+                },
+                src: [
                     '<%= config.ruby.path_build %>',
-                    '<%= config.ruby.path_rbenv %>',
-                    '<%= config.themes.path_dracula %>',
+                    '<%= config.ruby.path_rbenv %>'
+                ]
+            },
+            theme: {
+                options: {
+                    force: true
+                },
+                src: [
+                    '<%= config.themes.path_dracula %>'
+                ]
+            },
+            zsh: {
+                options: {
+                    force: true
+                },
+                src: [
                     '<%= config.zsh.path_oh_my_zsh %>',
                     '<%= config.zsh.path_syntax_highlighting %>',
                     '<%= config.zsh.path_theme_dracula %>',
@@ -283,6 +311,36 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-symlink');
     grunt.loadNpmTasks('grunt-template');
 
-    grunt.registerTask('setup', ['banner', 'prompt', 'clean', 'template', 'gitclone', 'shell', 'symlink']);
+    // -- Setup ----------------------------------------------------------------
 
+    grunt.registerTask('setup', [
+        'banner', 'prompt', 'clean', 'template', 'gitclone', 'shell', 'symlink'
+    ]);
+
+    grunt.registerTask('setup:alfred', [
+        'clean:theme', 'gitclone:theme_dracula', 'shell:theme_alfred'
+    ]);
+
+    grunt.registerTask('setup:git', [
+        'clean:git', 'template:git'
+    ]);
+
+    grunt.registerTask('setup:iterm', [
+        'clean:theme', 'gitclone:theme_dracula', 'shell:theme_iterm'
+    ]);
+
+    grunt.registerTask('setup:osx', [
+        'clean:osx', 'template:osx', 'shell:osx'
+    ]);
+
+    grunt.registerTask('setup:ruby', [
+        'clean:ruby', 'gitclone:ruby_rbenv', 'gitclone:ruby_build',
+        'shell:ruby_compass', 'shell:ruby_jekyll','shell:ruby_update'
+    ]);
+
+    grunt.registerTask('setup:zsh', [
+        'clean:theme', 'clean:zsh', 'template:zsh', 'gitclone:oh_my_zsh',
+        'gitclone:theme_dracula', 'gitclone:zsh_syntax_highlighting',
+        'symlink:zsh_theme_dracula', 'shell:z', 'shell:zsh'
+    ]);
 };
