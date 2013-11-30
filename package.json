@@ -25,6 +25,10 @@
   "bin": {
     "dotfiles": "bin/dotfiles"
   },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
   "dependencies": {
     "grunt": "~0.4.2",
     "grunt-bump": "0.0.11",
