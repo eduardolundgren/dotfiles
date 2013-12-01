@@ -27,14 +27,14 @@ if [[ OSX ]]; then
     defaults write com.apple.menuextra.battery ShowPercent -string "NO"
     defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
-    # Save to disk (not to iCloud) by default
-    defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+    # General: Enable save documents to iCloud
+    defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool <%- osx.general_icloud %>
 
-    # Automatically quit printer app once the print jobs complete
-    defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+    # General: automatically quit printer app once the print jobs complete
+    defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool <%- osx.general_printer %>
 
-    # Disable the “Are you sure you want to open this application?” dialog
-    defaults write com.apple.LaunchServices LSQuarantine -bool false
+    # General: enable the "Are you sure you want to open this application?" dialog
+    defaults write com.apple.LaunchServices LSQuarantine -bool <%- osx.general_dialog %>
 
     # Reveal IP address, hostname, OS version, etc. when clicking the clock
     # in the login window
@@ -43,29 +43,29 @@ if [[ OSX ]]; then
     # Restart automatically if the computer freezes
     systemsetup -setrestartfreeze on
 
-    # Disable smart quotes as they’re annoying when typing code
-    defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+    # General: enable smart quotes, they're annoying when typing code
+    defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool <%- osx.general_quotes %>
 
-    # Disable smart dashes as they’re annoying when typing code
-    defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+    # General: enable smart dashes, they're annoying when typing code
+    defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool <%- osx.general_dashes %>
 
     ############################################################################
     # Trackpad, mouse, keyboard, Bluetooth accessories, and input              #
     ############################################################################
 
-    # Trackpad: enable tap to click for this user and for the login screen
-    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+    # Trackpad: enable tap to click
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool <%- osx.trackpad_tap %>
     defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
     defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-    # Trackpad: map bottom right corner to right-click
+    # Trackpad: enable bottom right corner to right-click
     defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool <%- osx.trackpad_corner %>
     defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-    defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+    defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool <%- osx.trackpad_corner %>
 
-    # Disable “natural” (Lion-style) scrolling
-    defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+    # General: enable "natural" (Lion-style) scrolling
+    defaults write NSGlobalDomain com.apple.swipescrolldirection -bool <%- osx.general_scroll %>
 
     # Increase sound quality for Bluetooth headphones/headsets
     defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -74,20 +74,20 @@ if [[ OSX ]]; then
     # (e.g. enable Tab in modal dialogs)
     defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-    # Use scroll gesture with the Ctrl (^) modifier key to zoom
-    defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+    # General: enable scroll gesture with the Ctrl (^) modifier key to zoom
+    defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool <%- osx.general_zoom %>
     defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
     # Follow the keyboard focus while zoomed in
-    defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+    defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool <%- osx.general_zoom %>
 
-    # Disable press-and-hold for keys in favor of key repeat
-    defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+    # General: enable press-and-hold for keys instead of key repeat
+    defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool <%- osx.general_repeat %>
 
     # Set a blazingly fast keyboard repeat rate
     defaults write NSGlobalDomain KeyRepeat -int 0
 
-    # Automatically illuminate built-in MacBook keyboard in low light
-    defaults write com.apple.BezelServices kDim -bool true
+    # General: automatically illuminate built-in MacBook keyboard in low light
+    defaults write com.apple.BezelServices kDim -bool <%- osx.general_illuminate %>
     # Turn off keyboard illumination when computer is not used for 5 minutes
     defaults write com.apple.BezelServices kDimTime -int 300
 
@@ -97,10 +97,10 @@ if [[ OSX ]]; then
     defaults write NSGlobalDomain AppleLanguages -array "en"
     defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
     defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-    defaults write NSGlobalDomain AppleMetricUnits -bool true
+    defaults write NSGlobalDomain AppleMetricUnits -bool <%- osx.general_metric %>
 
-    # Disable auto-correct
-    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+    # General: enable auto-correct
+    defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool <%- osx.general_autocorrect %>
 
     ############################################################################
     # Screen                                                                   #
@@ -120,62 +120,62 @@ if [[ OSX ]]; then
     # Enable subpixel font rendering on non-Apple LCDs
     defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-    # Enable HiDPI display modes (requires restart)
-    sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+    # General: enable HiDPI display modes (requires restart)
+    sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool <%- osx.general_hidpi %>
 
     ############################################################################
     # Finder                                                                   #
     ############################################################################
 
     # Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
-    defaults write com.apple.finder QuitMenuItem -bool true
+    defaults write com.apple.finder QuitMenuItem -bool <%- osx.finder_quit %>
 
-    # Finder: disable window animations and Get Info animations
-    defaults write com.apple.finder DisableAllAnimations -bool true
+    # Finder: disable window and Get Info animations
+    defaults write com.apple.finder DisableAllAnimations -bool <%- osx.finder_animation %>
 
-    # Show icons for hard drives, servers, and removable media on the desktop
-    defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-    defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-    defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
-    defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+    # General: Enable icons for hard drives, servers, and removable media on the desktop
+    defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool <%- osx.general_icons %>
+    defaults write com.apple.finder ShowHardDrivesOnDesktop -bool <%- osx.general_icons %>
+    defaults write com.apple.finder ShowMountedServersOnDesktop -bool <%- osx.general_icons %>
+    defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool <%- osx.general_icons %>
 
     # Finder: show hidden files by default
-    defaults write com.apple.finder AppleShowAllFiles -bool true
+    defaults write com.apple.finder AppleShowAllFiles -bool <%- osx.finder_hidden %>
 
     # Finder: show all filename extensions
-    defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+    defaults write NSGlobalDomain AppleShowAllExtensions -bool <%- osx.finder_extension %>
 
     # Finder: show status bar
-    defaults write com.apple.finder ShowStatusBar -bool true
+    defaults write com.apple.finder ShowStatusBar -bool <%- osx.finder_statusbar %>
 
     # Finder: show path bar
-    defaults write com.apple.finder ShowPathbar -bool true
+    defaults write com.apple.finder ShowPathbar -bool <%- osx.finder_pathbar %>
 
     # Finder: allow text selection in Quick Look
-    defaults write com.apple.finder QLEnableTextSelection -bool true
+    defaults write com.apple.finder QLEnableTextSelection -bool <%- osx.finder_selection %>
 
-    # Display full POSIX path as Finder window title
-    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+    # Finder: display full path as Finder window title
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool <%- osx.finder_path %>
 
     # When performing a search, search the current folder by default
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
-    # Disable the warning when changing a file extension
-    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+    # General: enable the warning when changing a file extension
+    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool <%- osx.general_extension %>
 
-    # Enable spring loading for directories
-    defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+    # Finder: enable spring loading for directories
+    defaults write NSGlobalDomain com.apple.springing.enabled -bool <%- osx.finder_spring %>
 
     # Remove the spring loading delay for directories
     defaults write NSGlobalDomain com.apple.springing.delay -float 0
 
-    # Avoid creating .DS_Store files on network volumes
-    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+    # General: create .DS_Store files on network volumes
+    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool <%- osx.general_dstore %>
 
-    # Automatically open a new Finder window when a volume is mounted
-    defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-    defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-    defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+    # Finder: automatically open a new window when a volume is mounted
+    defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool <%- osx.finder_window %>
+    defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool <%- osx.finder_window %>
+    defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool <%- osx.finder_window %>
 
     # Show item info near icons on the desktop and in other icon views
     /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
@@ -204,11 +204,11 @@ if [[ OSX ]]; then
     # Four-letter codes for the other view modes: `icnv`, `Nlsv`, `Flwv`
     defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-    # Disable the warning before emptying the Trash
-    defaults write com.apple.finder WarnOnEmptyTrash -bool false
+    # General: enable the warning before emptying the Trash
+    defaults write com.apple.finder WarnOnEmptyTrash -bool <%- osx.general_trash %>
 
-    # Enable AirDrop over Ethernet and on unsupported Macs running Lion
-    defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+    # Finder: enable AirDrop over Ethernet and on unsupported Macs running Lion
+    defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool <%- osx.finder_airdrop %>
 
     # Show the ~/Library folder
     chflags nohidden ~/Library
@@ -217,35 +217,35 @@ if [[ OSX ]]; then
     # Dock, Dashboard, and hot corners                                         #
     ############################################################################
 
-    # Enable highlight hover effect for the grid view of a stack (Dock)
-    defaults write com.apple.dock mouse-over-hilite-stack -bool true
+    # Dock: enable highlight hover effect for the grid view of a stack
+    defaults write com.apple.dock mouse-over-hilite-stack -bool <%- osx.dock_highlight %>
 
     # Set the icon size of Dock items to 48 pixels
     defaults write com.apple.dock tilesize -int 48
 
-    # Enable magnification
-    defaults write com.apple.dock magnification -bool true
+    # Dock: enable magnification
+    defaults write com.apple.dock magnification -bool <%- osx.dock_magnification %>
 
     # Set magnification icon size to 80 pixels
     defaults write com.apple.dock largesize -float 80
 
-    # Minimize windows into their application’s icon
-    defaults write com.apple.dock minimize-to-application -bool true
+    # Dock: minimize windows into their application's icon
+    defaults write com.apple.dock minimize-to-application -bool <%- osx.dock_minimize %>
 
-    # Enable spring loading for all Dock items
-    defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+    # Dock: enable spring loading for all Dock items
+    defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool <%- osx.dock_spring %>
 
-    # Don’t animate opening applications from the Dock
-    defaults write com.apple.dock launchanim -bool false
+    # Dock: enable animation when opening applications
+    defaults write com.apple.dock launchanim -bool <%- osx.dock_animation %>
 
     # Speed up Mission Control animations
     defaults write com.apple.dock expose-animation-duration -float 0.1
 
-    # Don’t show Dashboard as a Space
-    defaults write com.apple.dock dashboard-in-overlay -bool true
+    # General: enable Dashboard as a Space
+    defaults write com.apple.dock dashboard-in-overlay -bool <%- osx.general_dashboard %>
 
-    # Don’t automatically rearrange Spaces based on most recent use
-    defaults write com.apple.dock mru-spaces -bool false
+    # General: automatically rearrange Spaces based on most recent use
+    defaults write com.apple.dock mru-spaces -bool <%- osx.general_spaces %>
 
     # Remove the auto-hiding Dock delay
     defaults write com.apple.dock autohide-delay -float 0
@@ -253,11 +253,11 @@ if [[ OSX ]]; then
     # Speed up animation when hiding/showing the Dock
     defaults write com.apple.dock autohide-time-modifier -float 0.3
 
-    # Automatically hide and show the Dock
-    defaults write com.apple.dock autohide -bool true
+    # Dock: automatically hide and show
+    defaults write com.apple.dock autohide -bool <%- osx.dock_autohide %>
 
-    # Make Dock icons of hidden applications translucent
-    defaults write com.apple.dock showhidden -bool true
+    # Dock: make icons of hidden applications translucent
+    defaults write com.apple.dock showhidden -bool <%- osx.dock_translucent %>
 
     # Reset Launchpad
     find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
@@ -294,8 +294,8 @@ if [[ OSX ]]; then
     # Only use UTF-8 in Terminal.app
     defaults write com.apple.terminal StringEncodings -array 4
 
-    # Don’t display the annoying prompt when quitting iTerm
-    defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+    # iTerm: enable prompt when quitting iTerm
+    defaults write com.googlecode.iterm2 PromptOnQuit -bool <%- osx.iterm_prompt %>
 
     ############################################################################
     # Kill affected applications                                               #

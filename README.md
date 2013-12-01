@@ -71,76 +71,75 @@ All my command-line tools and its configurations. Have fun :)
 
 ###### OSX
 
-* Automatically hide and show the Dock
-* Automatically illuminate built-in MacBook keyboard in low light
-* Automatically open a new Finder window when a volume is mounted
-* Automatically quit printer app once the print jobs complete
-* Avoid creating .DS_Store files on network volumes
-* Disable auto-correct
-* Disable press-and-hold for keys in favor of key repeat
-* Disable smart dashes as they’re annoying when typing code
-* Disable smart quotes as they’re annoying when typing code
 * Disable the sound effects on boot
-* Disable the warning before emptying the Trash
-* Disable the warning when changing a file extension
-* Disable the “Are you sure you want to open this application?” dialog
-* Disable “natural” (Lion-style) scrolling
-* Display full POSIX path as Finder window title
-* Don’t animate opening applications from the Dock
-* Don’t automatically rearrange Spaces based on most recent use
-* Don’t display the annoying prompt when quitting iTerm
-* Don’t show Dashboard as a Space
-* Enable AirDrop over Ethernet and on unsupported Macs running Lion
-* Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)
-* Enable HiDPI display modes (requires restart)
-* Enable highlight hover effect for the grid view of a stack (Dock)
+* Dock: automatically hide and show
+* Dock: enable animation when opening applications
+* Dock: enable highlight hover effect for the grid view of a stack
+* Dock: enable magnification
+* Dock: enable spring loading for all Dock items
+* Dock: make icons of hidden applications translucent
+* Dock: minimize windows into their application's icon
+* Enable full keyboard access for all controls
+* Enable hot corners
 * Enable snap-to-grid for icons on the desktop and in other icon views
-* Enable spring loading for all Dock items
-* Enable spring loading for directories
 * Enable subpixel font rendering on non-Apple LCDs
 * Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
 * Finder: allow text selection in Quick Look
-* Finder: disable window animations and Get Info animations
+* Finder: automatically open a new window when a volume is mounted
+* Finder: disable window and Get Info animations
+* Finder: display full path as Finder window title
+* Finder: enable AirDrop over Ethernet and on unsupported Macs running Lion
+* Finder: enable spring loading for directories
 * Finder: show all filename extensions
 * Finder: show hidden files by default
 * Finder: show path bar
 * Finder: show status bar
 * Follow the keyboard focus while zoomed in
 * Four-letter codes for the other view modes: `icnv`, `Nlsv`, `Flwv`
-* Hot corners
+* General: automatically illuminate built-in MacBook keyboard in low light
+* General: automatically quit printer app once the print jobs complete
+* General: automatically rearrange Spaces based on most recent use
+* General: create .DS_Store files on network volumes
+* General: enable "natural" (Lion-style) scrolling
+* General: enable auto-correct
+* General: enable Dashboard as a Space
+* General: enable HiDPI display modes (requires restart)
+* General: Enable icons for hard drives, servers, and removable media on the desktop
+* General: enable press-and-hold for keys instead of key repeat
+* General: Enable save documents to iCloud
+* General: enable scroll gesture with the Ctrl (^) modifier key to zoom
+* General: enable smart dashes, they're annoying when typing code
+* General: enable smart quotes, they're annoying when typing code
+* General: enable the "Are you sure you want to open this application?" dialog
+* General: enable the warning before emptying the Trash
+* General: enable the warning when changing a file extension
 * Increase grid spacing for icons on the desktop and in other icon views
 * Increase sound quality for Bluetooth headphones/headsets
 * Increase the size of icons on the desktop and in other icon views
-* Keep-alive: update existing `sudo` time stamp until `.osx` has finished
-* Make Dock icons of hidden applications translucent
+* iTerm: enable prompt when quitting iTerm
 * Menu bar: show remaining battery time (on pre-10.8); hide percentage
-* Minimize windows into their application’s icon
 * Only use UTF-8 in Terminal.app
 * Remove the auto-hiding Dock delay
 * Remove the spring loading delay for directories
 * Require password immediately after sleep or screen saver begins
 * Restart automatically if the computer freezes
-* Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
+* Reveal IP address, hostname, OS version, etc. when clicking the clock
 * Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 * Save screenshots to ~/Screenshots
-* Save to disk (not to iCloud) by default
 * Set a blazingly fast keyboard repeat rate
 * Set computer name (as done via System Preferences → Sharing)
 * Set language and text formats
-* Set the icon size of Dock items to 48 pixels
-* Enable magnification
 * Set magnification icon size to 80 pixels
-* Show icons for hard drives, servers, and removable media on the desktop
+* Set the icon size of Dock items to 48 pixels
 * Show item info near icons on the desktop and in other icon views
 * Show item info to the right of the icons on the desktop
 * Show the ~/Library folder
 * Speed up animation when hiding/showing the Dock
 * Speed up Mission Control animations
-* Trackpad: enable tap to click for this user and for the login screen
-* Trackpad: map bottom right corner to right-click
+* Trackpad: enable bottom right corner to right-click
+* Trackpad: enable tap to click
 * Turn off keyboard illumination when computer is not used for 5 minutes
 * Use columns view in all Finder windows by default
-* Use scroll gesture with the Ctrl (^) modifier key to zoom
 * When performing a search, search the current folder by default
 
 For the full configuration list [click here](https://github.com/eduardolundgren/dotfiles/blob/master/templates/.osx)

@@ -10,6 +10,7 @@
 'use strict';
 
 var userhome = require('userhome');
+var choices = require('./templates/.osx.json');
 
 module.exports = function(grunt) {
 
@@ -101,6 +102,12 @@ module.exports = function(grunt) {
                             config: 'config.zsh.theme_oh_my_zsh',
                             default: 'dracula',
                             message: 'Which Oh My Zsh theme would you like to use?'
+                        },
+                        {
+                            choices: choices,
+                            config: 'config.osx.booleans',
+                            message: 'Which OSX options would you like to use? (press enter to use default values)',
+                            type: 'checkbox'
                         }
                     ]
                 }
@@ -148,7 +155,16 @@ module.exports = function(grunt) {
 
             osx: {
                 options: {
-                    data: '<%= config %>'
+                    data: function(config) {
+                        config = grunt.config.data.config;
+
+                        choices.forEach(function(choice) {
+                            config.osx[choice.value] =
+                                config.osx.booleans.indexOf(choice.value) > -1;
+                        });
+
+                        return config;
+                    }
                 },
                 files: {
                     '<%= config.osx.path_osx %>': ['templates/.osx']
