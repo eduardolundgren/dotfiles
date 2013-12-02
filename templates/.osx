@@ -241,7 +241,7 @@ if [[ OSX ]]; then
     # Speed up Mission Control animations
     defaults write com.apple.dock expose-animation-duration -float 0.1
 
-    # General: enable Dashboard as a Space
+    # General: enable Dashboard as an overlay
     defaults write com.apple.dock dashboard-in-overlay -bool <%- osx.general_dashboard %>
 
     # General: automatically rearrange Spaces based on most recent use

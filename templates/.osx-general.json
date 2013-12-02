@@ -30,8 +30,8 @@
         "value": "general_autocorrect"
     },
     {
-        "checked": false,
-        "name": "Enable Dashboard as a Space",
+        "checked": true,
+        "name": "Enable Dashboard as an overlay",
         "value": "general_dashboard"
     },
     {

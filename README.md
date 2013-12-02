@@ -102,7 +102,7 @@ All my command-line tools and its configurations. Have fun :)
 * General: create .DS_Store files on network volumes
 * General: enable "natural" (Lion-style) scrolling
 * General: enable auto-correct
-* General: enable Dashboard as a Space
+* General: enable Dashboard as an overlay
 * General: enable HiDPI display modes (requires restart)
 * General: Enable icons for hard drives, servers, and removable media on the desktop
 * General: enable press-and-hold for keys instead of key repeat
