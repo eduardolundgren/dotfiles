@@ -1,97 +1,97 @@
 [
     {
         "checked": true,
-        "name": "General: automatically illuminate built-in MacBook keyboard in low light",
+        "name": "Automatically illuminate built-in MacBook keyboard in low light",
         "value": "general_illuminate"
     },
     {
         "checked": true,
-        "name": "General: automatically quit printer app once the print jobs complete",
+        "name": "Automatically quit printer app once the print jobs complete",
         "value": "general_printer"
     },
     {
         "checked": false,
-        "name": "General: automatically rearrange Spaces based on most recent use",
+        "name": "Automatically rearrange Spaces based on most recent use",
         "value": "general_spaces"
     },
     {
         "checked": true,
-        "name": "General: Don't create .DS_Store files on network volumes",
+        "name": "Don't create .DS_Store files on network volumes",
         "value": "general_dstore"
     },
     {
         "checked": false,
-        "name": "General: enable natural (Lion-style) scrolling",
+        "name": "Enable natural (Lion-style) scrolling",
         "value": "general_scroll"
     },
     {
         "checked": false,
-        "name": "General: enable auto-correct",
+        "name": "Enable auto-correct",
         "value": "general_autocorrect"
     },
     {
         "checked": false,
-        "name": "General: enable Dashboard as a Space",
+        "name": "Enable Dashboard as a Space",
         "value": "general_dashboard"
     },
     {
         "checked": true,
-        "name": "General: enable HiDPI display modes (requires restart)",
+        "name": "Enable HiDPI display modes (requires restart)",
         "value": "general_hidpi"
     },
     {
         "checked": true,
-        "name": "General: Enable icons for hard drives, servers, and removable media on the desktop",
+        "name": "Enable icons for hard drives, servers, and removable media on the desktop",
         "value": "general_icons"
     },
     {
         "checked": true,
-        "name": "General: enable metric units",
+        "name": "Enable metric units",
         "value": "general_metric"
     },
     {
         "checked": false,
-        "name": "General: enable press-and-hold for keys instead of key repeat",
+        "name": "Enable press-and-hold for keys instead of key repeat",
         "value": "general_repeat"
     },
     {
         "checked": false,
-        "name": "General: Enable save documents to iCloud",
+        "name": "Enable save documents to iCloud",
         "value": "general_icloud"
     },
     {
         "checked": true,
-        "name": "General: enable scroll gesture with the Ctrl (^) modifier key to zoom",
+        "name": "Enable scroll gesture with the Ctrl (^) modifier key to zoom",
         "value": "general_zoom"
     },
     {
         "checked": false,
-        "name": "General: enable smart dashes, they're annoying when typing code",
+        "name": "Enable smart dashes, they're annoying when typing code",
         "value": "general_dashes"
     },
     {
         "checked": false,
-        "name": "General: enable smart quotes, they're annoying when typing code",
+        "name": "Enable smart quotes, they're annoying when typing code",
         "value": "general_quotes"
     },
     {
         "checked": false,
-        "name": "General: enable the \"Are you sure you want to open this application?\" dialog",
+        "name": "Enable the \"Are you sure you want to open this application?\" dialog",
         "value": "general_dialog"
     },
     {
         "checked": false,
-        "name": "General: enable the warning before emptying the Trash",
+        "name": "Enable the warning before emptying the Trash",
         "value": "general_trash"
     },
     {
         "checked": false,
-        "name": "General: enable the warning when changing a file extension",
+        "name": "Enable the warning when changing a file extension",
         "value": "general_extension"
     },
     {
         "checked": true,
-        "name": "General: follow the keyboard focus while zoomed in",
+        "name": "Follow the keyboard focus while zoomed in",
         "value": "general_focus"
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "checked": false,
-        "name": "iTerm: enable prompt when quitting iTerm",
+        "name": "Enable prompt when quitting iTerm",
         "value": "iterm_prompt"
     }
 ]

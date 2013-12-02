@@ -1,37 +1,37 @@
 [
     {
         "checked": true,
-        "name": "Dock: automatically hide and show",
+        "name": "Automatically hide and show",
         "value": "dock_autohide"
     },
     {
         "checked": false,
-        "name": "Dock: enable animation when opening applications",
+        "name": "Enable animation when opening applications",
         "value": "dock_animation"
     },
     {
         "checked": true,
-        "name": "Dock: enable highlight hover effect for the grid view of a stack",
+        "name": "Enable highlight hover effect for the grid view of a stack",
         "value": "dock_highlight"
     },
     {
         "checked": true,
-        "name": "Dock: enable magnification",
+        "name": "Enable magnification",
         "value": "dock_magnification"
     },
     {
         "checked": true,
-        "name": "Dock: enable spring loading for all Dock items",
+        "name": "Enable spring loading for all Dock items",
         "value": "dock_spring"
     },
     {
         "checked": true,
-        "name": "Dock: make icons of hidden applications translucent",
+        "name": "Make icons of hidden applications translucent",
         "value": "dock_translucent"
     },
     {
         "checked": true,
-        "name": "Dock: minimize windows into their application's icon",
+        "name": "Minimize windows into their application's icon",
         "value": "dock_minimize"
     }
 ]
