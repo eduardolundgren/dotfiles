@@ -17,6 +17,13 @@ var choicesGeneral = require('./templates/.osx-general');
 var choicesIterm = require('./templates/.osx-iterm');
 var choicesTrackpad = require('./templates/.osx-trackpad');
 
+function copyConfigChoicesAsBooleans(config, choices, from, to) {
+    choices.forEach(function(choice) {
+        config[to][choice.value] =
+            config.choices[from].indexOf(choice.value) > -1;
+    });
+}
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -340,10 +347,3 @@ module.exports = function(grunt) {
     grunt.registerTask('setup', ['banner', 'prompt', 'clean', 'template', 'gitclone', 'shell', 'symlink']);
 
 };
-
-function copyConfigChoicesAsBooleans(config, choices, from, to) {
-    choices.forEach(function(choice) {
-        config[to][choice.value] =
-            config.choices[from].indexOf(choice.value) > -1;
-    });
-}
