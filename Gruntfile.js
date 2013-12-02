@@ -52,7 +52,9 @@ module.exports = function(grunt) {
 
             git: {
                 path_gitconfig: userhome('.dotfiles/.gitconfig'),
-                path_gitignore: userhome('.dotfiles/.gitignore_global')
+                path_gitconfig_system: userhome('.gitconfig'),
+                path_gitignore: userhome('.dotfiles/.gitignore_global'),
+                path_gitignore_system: userhome('.gitignore_global')
             },
 
             osx: {
@@ -260,6 +262,16 @@ module.exports = function(grunt) {
         // -- Symbolic links ---------------------------------------------------
 
         symlink: {
+
+            git_config: {
+                dest: '<%= config.git.path_gitconfig_system %>',
+                relativeSrc: '<%= config.git.path_gitconfig %>'
+            },
+
+            git_ignore: {
+                dest: '<%= config.git.path_gitignore_system %>',
+                relativeSrc: '<%= config.git.path_gitignore %>'
+            },
 
             ruby: {
                 dest: '<%= config.ruby.path_rbenv_system %>',
