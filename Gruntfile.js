@@ -166,7 +166,6 @@ module.exports = function(grunt) {
                 },
                 src: [
                     userhome('.dotfiles'),
-                    // TODO - Remove symbolic links
                     '<%= config.ruby.path_rbenv_system %>',
                     '<%= config.z.path_z_system %>',
                     '<%= config.zsh.path_zshrc_system %>'
