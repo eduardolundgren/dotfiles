@@ -39,29 +39,34 @@ module.exports = function(grunt) {
         config: {
 
             git: {
-                path_gitconfig: userhome('.gitconfig'),
-                path_gitignore: userhome('.gitignore_global')
+                path_gitconfig: userhome('.dotfiles/.gitconfig'),
+                path_gitignore: userhome('.dotfiles/.gitignore_global')
             },
 
             osx: {
-                path_osx: userhome('.osx')
+                path_osx: userhome('.dotfiles/.osx')
             },
 
             ruby: {
-                path_build: userhome('.rbenv/plugins/ruby-build'),
-                path_rbenv: userhome('.rbenv')
+                path_build: userhome('.dotfiles/.rbenv/plugins/ruby-build'),
+                path_rbenv: userhome('.dotfiles/.rbenv'),
+                path_rbenv_system: userhome('.rbenv')
             },
 
             themes: {
-                path_dracula: userhome('.themes/dracula'),
+                path_dracula: userhome('.dotfiles/themes/dracula'),
+            },
+
+            z: {
+                path_z_system: userhome('.z')
             },
 
             zsh: {
-                path_oh_my_zsh: userhome('.oh-my-zsh'),
-                path_syntax_highlighting: userhome('.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'),
-                path_theme_dracula: userhome('.oh-my-zsh/themes/dracula.zsh-theme'),
-                path_z: userhome('.z'),
-                path_zshrc: userhome('.zshrc')
+                path_oh_my_zsh: userhome('.dotfiles/.oh-my-zsh'),
+                path_plugin_syntax: userhome('.dotfiles/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'),
+                path_theme_dracula: userhome('.dotfiles/.oh-my-zsh/themes/dracula.zsh-theme'),
+                path_zshrc: userhome('.dotfiles/.zshrc'),
+                path_zshrc_system: userhome('.zshrc')
             }
 
         },
@@ -124,16 +129,11 @@ module.exports = function(grunt) {
                     force: true
                 },
                 src: [
-                    '<%= config.git.path_gitconfig %>',
-                    '<%= config.git.path_gitignore %>',
-                    '<%= config.osx.path_osx %>',
-                    '<%= config.ruby.path_build %>',
-                    '<%= config.ruby.path_rbenv %>',
-                    '<%= config.themes.path_dracula %>',
-                    '<%= config.zsh.path_oh_my_zsh %>',
-                    '<%= config.zsh.path_syntax_highlighting %>',
-                    '<%= config.zsh.path_theme_dracula %>',
-                    '<%= config.zsh.path_zshrc %>'
+                    userhome('.dotfiles'),
+                    // TODO - Remove symbolic links
+                    '<%= config.ruby.path_rbenv_system %>',
+                    '<%= config.z.path_z_system %>',
+                    '<%= config.zsh.path_zshrc_system %>'
                 ]
             }
 
@@ -216,7 +216,7 @@ module.exports = function(grunt) {
 
             zsh_syntax_highlighting: {
                 options: {
-                    directory: '<%= config.zsh.path_syntax_highlighting %>',
+                    directory: '<%= config.zsh.path_plugin_syntax %>',
                     repository: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
                 }
             }
@@ -227,9 +227,19 @@ module.exports = function(grunt) {
 
         symlink: {
 
+            ruby: {
+                dest: '<%= config.ruby.path_rbenv_system %>',
+                relativeSrc: '<%= config.ruby.path_rbenv %>'
+            },
+
             sublime: {
                 dest: '/usr/local/bin/subl',
                 relativeSrc: '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
+            },
+
+            zsh: {
+                dest: '<%= config.zsh.path_zshrc_system %>',
+                relativeSrc: '<%= config.zsh.path_zshrc %>'
             },
 
             zsh_theme_dracula: {
@@ -248,7 +258,7 @@ module.exports = function(grunt) {
             },
 
             z: {
-                command: 'touch <%= config.zsh.path_z %>'
+                command: 'touch <%= config.z.path_z_system %>'
             },
 
             zsh: {
