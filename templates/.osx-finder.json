@@ -1,0 +1,57 @@
+[
+    {
+        "checked": true,
+        "name": "Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons",
+        "value": "finder_quit"
+    },
+    {
+        "checked": true,
+        "name": "Finder: allow text selection in Quick Look",
+        "value": "finder_selection"
+    },
+    {
+        "checked": true,
+        "name": "Finder: automatically open a new window when a volume is mounted",
+        "value": "finder_window"
+    },
+    {
+        "checked": true,
+        "name": "Finder: disable window and Get Info animations",
+        "value": "finder_animation"
+    },
+    {
+        "checked": true,
+        "name": "Finder: display full path as Finder window title",
+        "value": "finder_path"
+    },
+    {
+        "checked": true,
+        "name": "Finder: enable AirDrop over Ethernet and on unsupported Macs running Lion",
+        "value": "finder_airdrop"
+    },
+    {
+        "checked": true,
+        "name": "Finder: enable spring loading for directories",
+        "value": "finder_spring"
+    },
+    {
+        "checked": true,
+        "name": "Finder: show all filename extensions",
+        "value": "finder_extension"
+    },
+    {
+        "checked": true,
+        "name": "Finder: show hidden files by default",
+        "value": "finder_hidden"
+    },
+    {
+        "checked": true,
+        "name": "Finder: show path bar",
+        "value": "finder_pathbar"
+    },
+    {
+        "checked": true,
+        "name": "Finder: show status bar",
+        "value": "finder_statusbar"
+    }
+]

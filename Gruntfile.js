@@ -10,7 +10,12 @@
 'use strict';
 
 var userhome = require('userhome');
-var choices = require('./templates/.osx.json');
+
+var choicesDock = require('./templates/.osx-dock');
+var choicesFinder = require('./templates/.osx-finder');
+var choicesGeneral = require('./templates/.osx-general');
+var choicesIterm = require('./templates/.osx-iterm');
+var choicesTrackpad = require('./templates/.osx-trackpad');
 
 module.exports = function(grunt) {
 
@@ -109,9 +114,33 @@ module.exports = function(grunt) {
                             message: 'Which Oh My Zsh theme would you like to use?'
                         },
                         {
-                            choices: choices,
-                            config: 'config.osx.booleans',
-                            message: 'Which OSX options would you like to use? (press enter to use default values)',
+                            choices: choicesGeneral,
+                            config: 'config.choices.general',
+                            message: 'Which OSX general options would you like to use?',
+                            type: 'checkbox'
+                        },
+                        {
+                            choices: choicesDock,
+                            config: 'config.choices.dock',
+                            message: 'Which Dock options would you like to use?',
+                            type: 'checkbox'
+                        },
+                        {
+                            choices: choicesFinder,
+                            config: 'config.choices.finder',
+                            message: 'Which Finder options would you like to use?',
+                            type: 'checkbox'
+                        },
+                        {
+                            choices: choicesIterm,
+                            config: 'config.choices.iterm',
+                            message: 'Which iTerm options would you like to use?',
+                            type: 'checkbox'
+                        },
+                        {
+                            choices: choicesTrackpad,
+                            config: 'config.choices.trackpad',
+                            message: 'Which Trackpad options would you like to use?',
                             type: 'checkbox'
                         }
                     ]
@@ -155,14 +184,13 @@ module.exports = function(grunt) {
 
             osx: {
                 options: {
-                    data: function(config) {
-                        config = grunt.config.data.config;
-
-                        choices.forEach(function(choice) {
-                            config.osx[choice.value] =
-                                config.osx.booleans.indexOf(choice.value) > -1;
-                        });
-
+                    data: function() {
+                        var config = grunt.config.data.config;
+                        copyConfigChoicesAsBooleans(config, choicesDock, 'dock', 'osx');
+                        copyConfigChoicesAsBooleans(config, choicesFinder, 'finder', 'osx');
+                        copyConfigChoicesAsBooleans(config, choicesGeneral, 'general', 'osx');
+                        copyConfigChoicesAsBooleans(config, choicesIterm, 'iterm', 'osx');
+                        copyConfigChoicesAsBooleans(config, choicesTrackpad, 'trackpad', 'osx');
                         return config;
                     }
                 },
@@ -311,4 +339,10 @@ module.exports = function(grunt) {
 
     grunt.registerTask('setup', ['banner', 'prompt', 'clean', 'template', 'gitclone', 'shell', 'symlink']);
 
+    function copyConfigChoicesAsBooleans(config, choices, from, to) {
+        choices.forEach(function(choice) {
+            config[to][choice.value] =
+                config.choices[from].indexOf(choice.value) > -1;
+        });
+    }
 };
