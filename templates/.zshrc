@@ -2,6 +2,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH="<%- zsh.path_oh_my_zsh %>"
 
+# -- Editor --------------------------------------------------------------------
+EDITOR="<%- editor %>"
+
 # -- Theme ---------------------------------------------------------------------
 # Set name of the theme to load.
 # Look in <%- zsh.path_oh_my_zsh %>/themes/
