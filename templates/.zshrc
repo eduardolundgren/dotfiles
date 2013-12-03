@@ -28,6 +28,8 @@ unsetopt correct_all
 unsetopt correct
 
 # -- Aliases -------------------------------------------------------------------
+source .aliases
+
 if [[ -f "$HOME/.aliases" ]]; then
     source $HOME/.aliases
 fi

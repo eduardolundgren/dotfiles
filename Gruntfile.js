@@ -50,6 +50,10 @@ module.exports = function(grunt) {
 
         config: {
 
+            aliases: {
+                path_aliases: userhome('.dotfiles/.aliases')
+            },
+
             git: {
                 path_gitconfig: userhome('.dotfiles/.gitconfig'),
                 path_gitconfig_system: userhome('.gitconfig'),
@@ -179,6 +183,15 @@ module.exports = function(grunt) {
         // -- Templates --------------------------------------------------------
 
         template: {
+
+            aliases: {
+                options: {
+                    data: '<%= config %>'
+                },
+                files: {
+                    '<%= config.aliases.path_aliases %>': ['templates/.aliases']
+                }
+            },
 
             git: {
                 options: {
