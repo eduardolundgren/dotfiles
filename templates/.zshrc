@@ -28,9 +28,7 @@ unsetopt correct_all
 unsetopt correct
 
 # -- Aliases -------------------------------------------------------------------
-if [[ -f "$HOME/.dotfiles/.aliases" ]]; then
-    source $HOME/.dotfiles/.aliases
-fi
+source $HOME/.dotfiles/.aliases
 
 if [[ -f "$HOME/.aliases" ]]; then
     source $HOME/.aliases
