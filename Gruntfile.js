@@ -350,6 +350,10 @@ module.exports = function(grunt) {
 
             ruby_update: {
                 command: 'sudo gem update --system'
+            },
+
+            brew: {
+                command: 'ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"'
             }
 
         }
