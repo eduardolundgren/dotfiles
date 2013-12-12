@@ -45,6 +45,7 @@
   },
   "peerDependencies": {
     "bower": ">=0.9.0",
+    "david": "~2.4.0",
     "docpad": "~6.54.10",
     "gh": "~1.8.2",
     "gh-gif": "~0.1.3",
