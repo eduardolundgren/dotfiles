@@ -354,6 +354,10 @@ module.exports = function(grunt) {
 
             brew: {
                 command: 'ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"'
+            },
+
+            brew_tig: {
+                command: 'brew install tig'
             }
 
         }
