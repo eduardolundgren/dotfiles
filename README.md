@@ -140,7 +140,7 @@ All my command-line tools and its configurations. Have fun :)
 * Show the ~/Library folder
 * Speed up animation when hiding/showing the Dock
 * Speed up Mission Control animations
-* Trackpad: enable bottom right corner to right-click
+* Trackpad: disable bottom right corner to right-click
 * Trackpad: enable tap to click
 * Turn off keyboard illumination when computer is not used for 5 minutes
 * Use columns view in all Finder windows by default
