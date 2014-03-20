@@ -26,6 +26,11 @@
     bl = branch -a
     rl = remote -v
 
+    # Set Remote
+    rs = remote set-url
+    rso = remote set-url origin
+    rsu = remote set-url upstream
+
     # Status
     st = status -s
 
