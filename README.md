@@ -1,4 +1,4 @@
-# Eduardo's dotfiles
+# Zeno's dotfiles
 
 The first JavaScript-based dotfiles powered by [Grunt](http://gruntjs.com/).
 
@@ -84,7 +84,7 @@ All my command-line tools and its configurations. Have fun :)
 * Dock: make icons of hidden applications translucent
 * Dock: minimize windows into their application's icon
 * Enable full keyboard access for all controls
-* Enable hot corners
+* Disable hot corners
 * Enable snap-to-grid for icons on the desktop and in other icon views
 * Enable subpixel font rendering on non-Apple LCDs
 * Finder: allow quitting via ⌘ + Q; doing so will also hide desktop icons
@@ -104,7 +104,7 @@ All my command-line tools and its configurations. Have fun :)
 * General: automatically quit printer app once the print jobs complete
 * General: automatically rearrange Spaces based on most recent use
 * General: create .DS_Store files on network volumes
-* General: enable "natural" (Lion-style) scrolling
+* General: disable "natural" (Lion-style) scrolling
 * General: enable auto-correct
 * General: enable Dashboard as an overlay
 * General: enable HiDPI display modes (requires restart)
@@ -129,7 +129,7 @@ All my command-line tools and its configurations. Have fun :)
 * Restart automatically if the computer freezes
 * Reveal IP address, hostname, OS version, etc. when clicking the clock
 * Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
-* Save screenshots to ~/Screenshots
+* Save screenshots to ~/Desktop
 * Set a blazingly fast keyboard repeat rate
 * Set computer name (as done via System Preferences → Sharing)
 * Set language and text formats
