@@ -26,11 +26,6 @@
     bl = branch -a
     rl = remote -v
 
-    # Set Remote
-    rs = remote set-url
-    rso = remote set-url origin
-    rsu = remote set-url upstream
-
     # Status
     st = status -s
 
@@ -51,6 +46,14 @@
     psu  = push upstream
     psum = push upstream master
     psug = push upstream gh-pages
+
+    # Remote
+    ra  = remote add
+    rao = remote add origin
+    rau = remote add upstream
+    rs  = remote set-url
+    rso = remote set-url origin
+    rsu = remote set-url upstream
 
     # Logs
     l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
