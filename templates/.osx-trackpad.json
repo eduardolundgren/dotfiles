@@ -1,6 +1,6 @@
 [
     {
-        "checked": true,
+        "checked": false,
         "name": "Enable bottom right corner to right-click",
         "value": "trackpad_corner"
     },
