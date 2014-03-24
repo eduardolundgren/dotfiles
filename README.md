@@ -59,7 +59,6 @@ All my command-line tools and its configurations. Have fun :)
 
 * [N](https://github.com/visionmedia/n) for Node version management
 * [Bower](http://bower.io/) for front-end package management
-* [DocPad](http://docpad.org/) for static generated website development
 * [Grunt](http://gruntjs.com/) for task automation
 * [JSHint](http://www.jshint.com/) for JavaScript code quality
 * [NodeGH](http://www.nodegh.io/) GitHub command line tools
