@@ -315,21 +315,24 @@ module.exports = function(grunt) {
             osx: {
                 command: 'source <%= config.osx.path_osx %>',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             z: {
                 command: 'touch <%= config.z.path_z_system %>',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             zsh: {
                 command: 'chsh -s /bin/zsh',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
@@ -344,42 +347,48 @@ module.exports = function(grunt) {
             node_latest: {
                 command: 'sudo n latest',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             node_stable: {
                 command: 'sudo n stable',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             ruby_compass: {
                 command: 'sudo gem install compass',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             ruby_jekyll: {
                 command: 'sudo gem install jekyll',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             ruby_update: {
                 command: 'sudo gem update --system',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
             brew: {
                 command: 'ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"',
                 options: {
-                    stdout: true
+                    stdout: true,
+                    stderr: true
                 }
             },
 
