@@ -79,6 +79,12 @@ module.exports = function(grunt) {
                 path_z_system: userhome('.z')
             },
 
+            vim: {
+                path_vimrc: userhome('.dotfiles/.vimrc'),
+                path_vimrc_system: userhome('.vimrc'),
+                path_vundle: userhome('.dotfiles/.vundle')
+            },
+
             zsh: {
                 path_oh_my_zsh: userhome('.dotfiles/.oh-my-zsh'),
                 path_plugin_syntax: userhome('.dotfiles/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'),
@@ -220,6 +226,15 @@ module.exports = function(grunt) {
                 }
             },
 
+            vim: {
+                options: {
+                    data: '<%= config %>'
+                },
+                files: {
+                    '<%= config.vim.path_vimrc %>': ['templates/.vimrc']
+                }
+            },
+
             zsh: {
                 options: {
                     data: '<%= config %>'
@@ -263,6 +278,13 @@ module.exports = function(grunt) {
                 }
             },
 
+            vim_vundle: {
+                options: {
+                    directory: '<%= config.vim.path_vundle %>',
+                    repository: 'https://github.com/gmarik/Vundle.vim.git'
+                }
+            },
+
             zsh_syntax_highlighting: {
                 options: {
                     directory: '<%= config.zsh.path_plugin_syntax %>',
@@ -299,6 +321,11 @@ module.exports = function(grunt) {
             zsh: {
                 dest: '<%= config.zsh.path_zshrc_system %>',
                 relativeSrc: '<%= config.zsh.path_zshrc %>'
+            },
+
+            vim: {
+                dest: '<%= config.vim.path_vimrc_system %>',
+                relativeSrc: '<%= config.vim.path_vimrc %>'
             },
 
             zsh_theme_dracula: {
@@ -358,6 +385,10 @@ module.exports = function(grunt) {
 
             brew_tig: {
                 command: 'brew install tig'
+            },
+
+            vim_plugins: {
+                command: 'vim +PluginInstall +qall'
             }
 
         }
