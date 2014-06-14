@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                         },
                         {
                             config: 'config.editor',
-                            default: 'subl',
+                            default: 'subl -n -w',
                             message: 'Which editor would you like to use?'
                         },
                         {

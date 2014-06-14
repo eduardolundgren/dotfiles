@@ -72,4 +72,5 @@
     # the usual default is to push all branches
     default = tracking
 [core]
+    editor = <%- editor %>
     excludesfile = ~/.gitignore_global
