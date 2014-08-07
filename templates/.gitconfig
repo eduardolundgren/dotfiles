@@ -47,6 +47,14 @@
     psum = push upstream master
     psug = push upstream gh-pages
 
+    # Remote
+    ra  = remote add
+    rao = remote add origin
+    rau = remote add upstream
+    rs  = remote set-url
+    rso = remote set-url origin
+    rsu = remote set-url upstream
+
     # Logs
     l  = log --pretty=oneline --decorate --abbrev-commit --max-count=15
     ll = log --graph --pretty=format:'%Cred%h%Creset %an: %s %Creset%Cgreen(%cr)%Creset' --abbrev-commit --date=relative
