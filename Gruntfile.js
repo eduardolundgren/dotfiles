@@ -352,11 +352,19 @@ module.exports = function(grunt) {
             },
 
             theme_alfred: {
-                command: 'open <%= config.themes.path_dracula %>/alfred/Dracula.alfredappearance'
+                command: '[ -d "/Applications/Alfred 2.app" ] && open <%= config.themes.path_dracula %>/alfred/Dracula.alfredappearance || echo "Alfred App is not installed"',
+                options: {
+                     stdout: true,
+                     stderr: true
+                } 
             },
 
             theme_iterm: {
-                command: 'open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors'
+                command: '[ -d "/Applications/iTerm.app" ] && open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors || echo "iTerm App is not installed"',
+                options: {
+                     stdout: true,
+                     stderr: true
+                }
             },
 
             node_latest: {
