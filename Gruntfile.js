@@ -437,6 +437,10 @@ module.exports = function(grunt) {
 
             vim_plugins: {
                 command: 'vim +PluginInstall +qall'
+            },
+
+            git_extras: {
+                command: '(cd /tmp && git clone --depth 1 https://github.com/visionmedia/git-extras.git && cd git-extras && sudo make install)'
             }
 
         }
