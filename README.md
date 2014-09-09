@@ -1,5 +1,8 @@
 # Eduardo's dotfiles
 
+[![Dependencies Status](http://img.shields.io/david/eduardolundgren/dotfiles.svg?style=flat)](https://david-dm.org/eduardolundgren/dotfiles)
+[![PeerDependencies Status](http://img.shields.io/david/peer/eduardolundgren/dotfiles.svg?style=flat)](https://david-dm.org/eduardolundgren/dotfiles#info=peerDependencies)
+
 The first JavaScript-based dotfiles powered by [Grunt](http://gruntjs.com/).
 
 ![Preview](http://f.cl.ly/items/423c1j0C0r0x1c0C033f/dotfiles.png)
