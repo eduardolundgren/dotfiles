@@ -43,10 +43,12 @@ All my command-line tools and its configurations. Have fun :)
 ###### Aliases
 
 * `server` Serve current folder over HTTP
+* `up` Go up N directories
 
 ###### Shell
 
 * [ZSH](http://www.zsh.org/) for shell
+* [ZSH highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) for better UX
 * [Oh my ZSH](https://github.com/robbyrussell/oh-my-zsh) for ZSH tweaking
 
 ###### Theme
@@ -55,8 +57,9 @@ All my command-line tools and its configurations. Have fun :)
 
 ###### General
 
+* [Git Extras](https://github.com/visionmedia/git-extras)
+* [Ngrok](https://ngrok.com/) for introspected tunnels to localhost
 * [Z](https://github.com/rupa/z/) for quick navigation through folders
-* [Shell highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) Fish shell like syntax highlighting for Zsh
 
 ###### NodeJS
 
