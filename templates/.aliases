@@ -1,2 +1,16 @@
-# -- Server --------------------------------------------------------------------
+# -- Extras --------------------------------------------------------------------
+
+# Server
 alias server='open http://localhost:8000 && http-server -p 8000'
+
+# Go up N directories
+up() {
+  str=""
+  count=0
+  while [ "$count" -lt "$1" ];
+  do
+    str=$str"../"
+    let count=count+1
+  done
+  cd $str
+}
