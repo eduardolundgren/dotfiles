@@ -368,7 +368,7 @@ module.exports = function(grunt) {
                 options: {
                      stdout: true,
                      stderr: true
-                } 
+                }
             },
 
             theme_iterm: {

@@ -32,11 +32,13 @@ if (argv.length) {
     });
 }
 else {
+    var pkg = require('../package.json');
+
     // If no arguments were passed, check for updates.
     var updateNotifier = require('update-notifier'),
         notifier = updateNotifier({
-            packagePath: '../package.json',
-            updateCheckInterval: 1000 * 60 * 60 * 24 // 1 day
+            packageName: pkg.name,
+            packageVersion: pkg.version
         });
 
     if (notifier.update) {
