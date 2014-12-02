@@ -420,7 +420,7 @@ module.exports = function(grunt) {
             },
 
             brew: {
-                command: 'ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"',
+                command: 'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"',
                 options: {
                     stdout: true,
                     stderr: true
