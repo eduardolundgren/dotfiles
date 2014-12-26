@@ -43,6 +43,7 @@ All my command-line tools and its configurations. Have fun :)
 ###### Aliases
 
 * `server` Serve current folder over HTTP
+* `subl` Open file/dir with [Sublime Text 3](http://www.sublimetext.com/3)
 * `up` Go up N directories
 
 ###### Shell
