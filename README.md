@@ -62,16 +62,6 @@ All my command-line tools and its configurations. Have fun :)
 * [Ngrok](https://ngrok.com/) for introspected tunnels to localhost
 * [Z](https://github.com/rupa/z/) for quick navigation through folders
 
-###### NodeJS
-
-* [N](https://github.com/visionmedia/n) for Node version management
-* [Bower](http://bower.io/) for front-end package management
-* [Grunt](http://gruntjs.com/) for task automation
-* [JSHint](http://www.jshint.com/) for JavaScript code quality
-* [NodeGH](http://www.nodegh.io/) GitHub command line tools
-* [NodeGH Gif](https://github.com/node-gh/gh-gif) NodeGH plugin for commenting on pull requests/issues using GIF reactions.
-* [NodeGH Jira](https://github.com/node-gh/gh-jira) NodeGH plugin for integrating Jira, an issue management system
-
 ###### Ruby
 
 * [Rbenv](https://github.com/sstephenson/rbenv) for Ruby version management

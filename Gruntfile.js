@@ -379,22 +379,6 @@ module.exports = function(grunt) {
                 }
             },
 
-            node_latest: {
-                command: 'sudo n latest',
-                options: {
-                    stdout: true,
-                    stderr: true
-                }
-            },
-
-            node_stable: {
-                command: 'sudo n stable',
-                options: {
-                    stdout: true,
-                    stderr: true
-                }
-            },
-
             ruby_compass: {
                 command: 'sudo gem install compass',
                 options: {
