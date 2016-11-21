@@ -372,7 +372,7 @@ module.exports = function(grunt) {
             },
 
             theme_iterm: {
-                command: '[ -d "/Applications/iTerm.app" ] && open <%= config.themes.path_dracula %>/iterm/Dracula.itermcolors || echo "iTerm App is not installed"',
+                command: '[ -d "/Applications/iTerm.app" ] && open <%= config.themes.path_dracula %>/Dracula.itermcolors || echo "iTerm App is not installed"',
                 options: {
                      stdout: true,
                      stderr: true
