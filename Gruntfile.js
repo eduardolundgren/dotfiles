@@ -274,7 +274,7 @@ module.exports = function(grunt) {
             theme_dracula: {
                 options: {
                     directory: '<%= config.themes.path_dracula %>',
-                    repository: 'https://github.com/zenorocha/dracula-theme.git'
+                    repository: 'https://github.com/dracula/iterm.git'
                 }
             },
 
