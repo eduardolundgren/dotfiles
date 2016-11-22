@@ -337,7 +337,7 @@ module.exports = function(grunt) {
 
         // -- Exec -------------------------------------------------------------
 
-        shell: {
+        exec: {
 
             osx: {
                 command: 'source <%= config.osx.path_osx %>',
@@ -439,10 +439,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-git');
     grunt.loadNpmTasks('grunt-prompt');
-    grunt.loadNpmTasks('grunt-shell');
+    grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-symlink');
     grunt.loadNpmTasks('grunt-template');
 
-    grunt.registerTask('setup', ['banner', 'prompt', 'clean', 'template', 'gitclone', 'shell', 'symlink']);
+    grunt.registerTask('setup', ['banner', 'prompt', 'clean', 'template', 'gitclone', 'exec', 'symlink']);
 
 };
