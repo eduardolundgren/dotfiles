@@ -415,10 +415,6 @@ module.exports = function(grunt) {
                 command: 'brew install tig'
             },
 
-            brew_ngrok: {
-                command: 'brew install ngrok'
-            },
-
             vim_plugins: {
                 command: 'vim +PluginInstall +qall'
             },
