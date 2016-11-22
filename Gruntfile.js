@@ -72,7 +72,9 @@ module.exports = function(grunt) {
             },
 
             themes: {
-                path_dracula: userhome('.dotfiles/themes/dracula'),
+                path_dracula_alfred: userhome('.dotfiles/themes/alfred'),
+                path_dracula_iterm: userhome('.dotfiles/themes/iterm'),
+                path_dracula_zsh: userhome('.dotfiles/themes/zsh')
             },
 
             z: {
@@ -271,10 +273,24 @@ module.exports = function(grunt) {
                 }
             },
 
-            theme_dracula: {
+            theme_dracula_alfred: {
                 options: {
-                    directory: '<%= config.themes.path_dracula %>',
+                    directory: '<%= config.themes.path_dracula_alfred %>',
+                    repository: 'https://github.com/dracula/alfred.git'
+                }
+            },
+
+            theme_dracula_iterm: {
+                options: {
+                    directory: '<%= config.themes.path_dracula_iterm %>',
                     repository: 'https://github.com/dracula/iterm.git'
+                }
+            },
+
+            theme_dracula_zsh: {
+                options: {
+                    directory: '<%= config.themes.path_dracula_zsh %>',
+                    repository: 'https://github.com/dracula/zsh.git'
                 }
             },
 
@@ -330,7 +346,7 @@ module.exports = function(grunt) {
 
             zsh_theme_dracula: {
                 dest: '<%= config.zsh.path_theme_dracula %>',
-                relativeSrc: '<%= config.themes.path_dracula %>/zsh/dracula.zsh-theme'
+                relativeSrc: '<%= config.themes.path_dracula_zsh %>/dracula.zsh-theme'
             }
 
         },
@@ -364,7 +380,7 @@ module.exports = function(grunt) {
             },
 
             theme_alfred: {
-                command: '[ -d "/Applications/Alfred 2.app" ] && open <%= config.themes.path_dracula %>/alfred/Dracula.alfredappearance || echo "Alfred App is not installed"',
+                command: '[ -d "/Applications/Alfred 2.app" ] && open <%= config.themes.path_dracula_alfred %>/Dracula.alfredappearance || echo "Alfred App is not installed"',
                 options: {
                      stdout: true,
                      stderr: true
@@ -372,7 +388,7 @@ module.exports = function(grunt) {
             },
 
             theme_iterm: {
-                command: '[ -d "/Applications/iTerm.app" ] && open <%= config.themes.path_dracula %>/Dracula.itermcolors || echo "iTerm App is not installed"',
+                command: '[ -d "/Applications/iTerm.app" ] && open <%= config.themes.path_dracula_iterm %>/Dracula.itermcolors || echo "iTerm App is not installed"',
                 options: {
                      stdout: true,
                      stderr: true
